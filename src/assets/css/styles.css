@@ -1,4 +1,9 @@
 /* basic styles */
+:root {
+  --dark-blue: #032642;
+  --lighter-blue: #095491;
+  --off-white: #f1f1f1;
+}
 
 *,
 *::before,
@@ -11,18 +16,41 @@
 body {
   display: flex;
   flex-direction: column;
-  background: rebeccapurple;
+  background: #f1f1f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Home Page */
 #map {
-  height: 100%;
-  min-height: 450px;
-  border-radius: 0.5rem;
+  width: 100%;
+  height: 50vh;
   overflow: hidden;
 }
 
 #countdown {
   font-size: 4rem;
   font-weight: bolder;
+}
+
+.btn-blue {
+  background-color: #095491;
+  color: #f1f1f1;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.btn-blue:active {
+  background-color: #032642;
+}
+
+.timer-container {
+  background-color: #9da6af;
+  border-radius: 5px;
+  box-shadow: #4b4848 3px 2px 11px 1px;
+}
+
+/* Navbar */
+
+.header-nav {
+  background-color: #032642;
 }

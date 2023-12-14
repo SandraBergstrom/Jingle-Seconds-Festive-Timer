@@ -1,4 +1,4 @@
-const newYearDate = new Date("Jan 1, 2024 00:00:00").getTime();
+const newYearDate = new Date('Jan 1, 2024 00:00:00').getTime();
 
 // Update the countdown every 1 second
 const x = setInterval(function () {
@@ -15,11 +15,11 @@ const x = setInterval(function () {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("countdown").innerHTML =
-    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById('countdown').innerHTML =
+    days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "Happy New Year!";
+    document.getElementById('countdown').innerHTML = 'Happy New Year!';
   }
 }, 1000);
