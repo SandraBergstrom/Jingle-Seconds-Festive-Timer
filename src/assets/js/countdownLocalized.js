@@ -2,11 +2,11 @@ const { DateTime } = require("luxon");
 
 /**
  * Returns local time based on list of time-zones as an object.
- * Example format for location "Pacific".
- * Example format for town "Honolulu".
+ * Example format for location "Pacific" or "ETC"
+ * Example format for town "Honolulu" or "GMT+1"
  */
 function getSpecificLocalTime(location, town) {
-  let specificLocalTime = DateTime.now({ zone: `${location}/${town}` });
+  let specificLocalTime = DateTime.local({ zone: `${location}/${town}` });
   return specificLocalTime;
 }
 
@@ -14,8 +14,8 @@ function getSpecificLocalTime(location, town) {
  * Pass a date as a string in a format YY-MM-DD
  * and location/town based on list of time-zones.
  * Example format for date "2020-01-12"
- * Example format for location: "Pacific"
- * Example format for town: "Honolulu".
+ * Example format for location: "Pacific" or "ETC"
+ * Example format for town: "Honolulu" or GMT+1
  * Returns an object.
  **/
 function getNewYearTimeISO(date, location, town) {
@@ -25,8 +25,8 @@ function getNewYearTimeISO(date, location, town) {
 /**
  * Returns a difference between location in specific time-zone from a new year as an object
  * in a form {days: days-value, hours: hours-value, minutes: minutes-value, seconds: seconds-value}.
- * Example format for location "Pacific".
- * Example format for town "Honolulu".
+ * Example format for location "Pacific" or "ETC".
+ * Example format for town "Honolulu" or "GMT+1".
  */
 function getTimeDifference(location, town) {
   let actualTime = getSpecificLocalTime(location, town);
@@ -35,10 +35,6 @@ function getTimeDifference(location, town) {
     location,
     town
   );
-  console.log("......ACTUAL TIME......");
-  console.log(actualTime);
-  console.log("......HOLIDAY TIME......");
-  console.log(newYearTime);
 
   return newYearTime
     .diff(actualTime, ["days", "hours", "minutes", "seconds"])
