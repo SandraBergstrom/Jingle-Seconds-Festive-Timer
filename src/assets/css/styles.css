@@ -156,4 +156,19 @@ p {
   #map {
     height: 75vh;
   }
+
+  #countdown {
+    top: 65px;
+  }
+
+  .row>* {
+    /* remove flex-shrink: 0 */
+    flex: 1 1 0;
+  }
+
+  #counter-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
