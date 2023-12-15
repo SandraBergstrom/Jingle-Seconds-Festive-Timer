@@ -1,5 +1,9 @@
 import mapboxgl from "mapbox-gl";
-import { getCurrentLocationLatLng, fetchAPI } from "./countdown";
+import {
+  getCurrentLocationLatLng,
+  fetchGeolocationTimezoneData,
+  displayGeolocationData,
+} from "./countdown";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmFybmVzbG93IiwiYSI6ImNsMGUyeHV6MDBmMGYzanBybDIyZ3BvOTQifQ.orwWz3XDibvdJSe_tfAxEA";
@@ -79,7 +83,8 @@ map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
 
   // FUNCTION RUNS WITH BACKEND SERVER
-  // fetchAPI(lat, lng);
+  // fetchGeolocationTimezoneData(lat, lng);
+  displayGeolocationData();
 
   map.flyTo({
     center: [lng, lat],

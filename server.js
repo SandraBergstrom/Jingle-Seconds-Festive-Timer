@@ -11,8 +11,6 @@ app.use(express.json());
 app.post("/api/timezone", async (req, res) => {
   const { lat, lng } = req.body;
 
-  console.log(lat, lng);
-
   const data = await fetchCurrentTimeZone(lat, lng);
 
   res.json({ message: "Fetch call received successfully!", data });
