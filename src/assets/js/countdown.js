@@ -57,7 +57,7 @@ const x = setInterval(function () {
 }, 1000);
 
 // Converts location into lat.lng
-async function getCurrentLocationLatLng() {
+export async function getCurrentLocationLatLng() {
   try {
     const position = await getCurrentLocation();
     const lat = position.coords.latitude;

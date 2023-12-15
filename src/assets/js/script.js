@@ -1,17 +1,20 @@
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from "mapbox-gl";
+import { getCurrentLocationLatLng } from "./countdown";
+
+console.log(getCurrentLocationLatLng);
 
 mapboxgl.accessToken =
-  'pk.eyJ1IjoiYmFybmVzbG93IiwiYSI6ImNsMGUyeHV6MDBmMGYzanBybDIyZ3BvOTQifQ.orwWz3XDibvdJSe_tfAxEA';
+  "pk.eyJ1IjoiYmFybmVzbG93IiwiYSI6ImNsMGUyeHV6MDBmMGYzanBybDIyZ3BvOTQifQ.orwWz3XDibvdJSe_tfAxEA";
 
 const map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/mapbox/satellite-v9',
-  projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
+  container: "map",
+  style: "mapbox://styles/mapbox/satellite-v9",
+  projection: "globe", // Display the map as a globe, since satellite-v9 defaults to Mercator
   zoom: 1,
   center: [-90, 40],
 });
 
-map.on('style.load', () => {
+map.on("style.load", () => {
   map.setFog({}); // Set the default atmosphere style
 });
 
@@ -45,45 +48,55 @@ function spinGlobe() {
 }
 
 // Pause spinning on interaction
-map.on('mousedown', () => {
+map.on("mousedown", () => {
   userInteracting = true;
 });
 
 // Restart spinning the globe when interaction is complete
-map.on('mouseup', () => {
+map.on("mouseup", () => {
   userInteracting = false;
   spinGlobe();
 });
 
 // These events account for cases where the mouse has moved
 // off the map, so 'mouseup' will not be fired.
-map.on('dragend', () => {
+map.on("dragend", () => {
   userInteracting = false;
   spinGlobe();
 });
-map.on('pitchend', () => {
+map.on("pitchend", () => {
   userInteracting = false;
   spinGlobe();
 });
-map.on('rotateend', () => {
+map.on("rotateend", () => {
   userInteracting = false;
   spinGlobe();
 });
 
 // When animation is complete, start spinning if there is no ongoing interaction
-map.on('moveend', () => {
+map.on("moveend", () => {
   spinGlobe();
 });
 
-document.getElementById('btn-spin').addEventListener('click', (e) => {
+document.getElementById("btn-spin").addEventListener("click", (e) => {
   spinEnabled = !spinEnabled;
   if (spinEnabled) {
     spinGlobe();
-    e.target.innerHTML = 'Pause rotation';
+    e.target.innerHTML = "Pause rotation";
   } else {
     map.stop(); // Immediately end ongoing animation
-    e.target.innerHTML = 'Start rotation';
+    e.target.innerHTML = "Start rotation";
   }
 });
 
-spinGlobe();
+// spinGlobe();
+
+async function zoomToLatLng() {
+  const { lat, lng } = await getCurrentLocationLatLng();
+  map.flyTo({
+    center: [lng, lat],
+    zoom: 4, // Adjust the desired zoom level
+    essential: true, // This animation is considered essential with regards to prefers-reduced-motion media query
+  });
+}
+zoomToLatLng();
