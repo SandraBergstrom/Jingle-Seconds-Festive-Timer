@@ -1,15 +1,16 @@
 /* basic styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-  --dark-blue: #032642;
-  --lighter-blue: #095491;
+  --dark-blue: #031023;
+  --lighter-blue: #153c75;
   --off-white: #f1f1f1;
+  --accent-champagne: #f7e7ce;
   
-  --font-family: 'Open Sans', sans-serif;
-  --font-family-heading: 'Playfair Display', serif;
-
+  --font-family: Verdana, Tahoma, sans-serif;
+  --font-family-heading: 'Roboto', sans-serif;
 }
 
 *,
@@ -24,8 +25,22 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--off-white);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* font-family: 'Playfair', 'Times New Roman', Times, serif; */
+}
+
+h1 {
+  font-family: var(--font-family-heading);
+  color: var(--accent-champagne);
+}
+
+h2 {
+  font-family: var(--font-family);
+  color: var(--dark-blue);
+}
+
+p {
+  font-family: var(--font-family);
+  color: var(--dark-blue);
 }
 
 /* Home Page */
@@ -35,10 +50,14 @@ body {
 
 .map-container h1 {
   position: absolute;
-  top: 20px; 
   margin: auto; 
   z-index: 1;
-  color: var(--off-white);
+  text-shadow: 2px 2px 4px #000000b0;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 #map {
@@ -48,7 +67,7 @@ body {
 }
 
 #countdown {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bolder;
 }
 
@@ -58,14 +77,33 @@ body {
 }
 
 .btn-blue {
-  background-color: var(--lighter-blue);
-  color: var(--off-white);
-  padding: 7px;
+  background-color: var(--accent-champagne);
+  color: var(--dark-blue);
+  padding: 10px;
   border-radius: 5px;
 }
 
 .btn-blue:active {
   background-color: var(--dark-blue);
+}
+
+#btn-spin {
+  position: relative;
+  margin-top: -65px;
+  display: inline-block;
+  font-family: var(--font-family);
+  color: var(--accent-champagne);
+  background: linear-gradient(to right, var(--dark-blue) 0%, var(--lighter-blue) 100%);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.5s;
+}
+
+#btn-spin:hover {
+  background: linear-gradient(to right, var(--off-white) 0%, var(--accent-champagne) 100%);
+  color: var(--dark-blue);
 }
 
 .timer-container {
@@ -83,7 +121,7 @@ body {
 /* Navbar */
 
 .header-nav {
-  background-color: #032642;
+  background-color: var(--dark-blue);
 }
 
 .nav-item .nav-link {
