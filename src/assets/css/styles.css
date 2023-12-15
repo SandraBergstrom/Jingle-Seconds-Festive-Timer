@@ -1,6 +1,6 @@
 /* basic styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap");
 
 :root {
   --dark-blue: #032642;
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   background: var(--off-white);
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-family: 'Playfair', 'Times New Roman', Times, serif;
+  font-family: "Playfair", "Times New Roman", Times, serif;
 }
 
 /* Home Page */

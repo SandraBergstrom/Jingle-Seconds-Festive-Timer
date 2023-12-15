@@ -83,8 +83,8 @@ map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
 
   // FUNCTION RUNS WITH BACKEND SERVER
-  // fetchGeolocationTimezoneData(lat, lng);
-  displayGeolocationData();
+  fetchGeolocationTimezoneData(lat, lng);
+  // displayGeolocationData();
 
   map.flyTo({
     center: [lng, lat],
