@@ -88,7 +88,7 @@ async function getCurrentLocation() {
   });
 }
 
-async function fetchAPI(lat, lng) {
+export async function fetchAPI(lat, lng) {
   const response = await fetch("http://localhost:3000/api/timezone", {
     method: "POST",
     headers: {
