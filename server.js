@@ -27,19 +27,24 @@ async function fetchCurrentTimeZone(lat, lng) {
   console.log("Fetching " + lat + ", " + lng);
 
   const apiKey = process.env.GOOGLE_TIMEZONE_API_KEY;
-  const url = `https://maps.googleapis.com/maps/api/timezone/json?location=${lat},${lng}&timestamp=1331766000&key=${apiKey}`;
+  const timezoneURL = `https://maps.googleapis.com/maps/api/timezone/json?location=${lat},${lng}&timestamp=1331766000&key=${apiKey}`;
+
+  const geoCodeURL = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`;
 
   try {
-    const response = await fetch(url);
+    const [geoCodeResponse, timezoneResponse] = await Promise.all([
+      fetch(geoCodeURL),
+      fetch(timezoneURL),
+    ]);
 
-    if (!response.ok) {
-      console.log(response);
+    if (!geoCodeResponse.ok || !timezoneResponse.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const data = await response.json();
+    const geoCodeData = await geoCodeResponse.json();
+    const timezoneData = await timezoneResponse.json();
 
-    return data;
+    return { geoCodeData, timezoneData };
   } catch (error) {
     console.error("Error:", error);
   }

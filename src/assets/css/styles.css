@@ -32,6 +32,11 @@ body {
   font-weight: bolder;
 }
 
+#flag {
+  border-radius: 2rem;
+  max-width: 300px;
+}
+
 .btn-blue {
   background-color: #095491;
   color: #f1f1f1;

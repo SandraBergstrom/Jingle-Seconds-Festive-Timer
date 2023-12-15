@@ -71,13 +71,14 @@ map.on("rotateend", () => {
   spinGlobe();
 });
 
-// When animation is complete, start spinning if there is no ongoing interaction
 map.on("moveend", () => {
   spinGlobe();
 });
 
 map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
+
+  getCurrentLocationLatLng(lat, lng);
 
   map.flyTo({
     center: [lng, lat],
@@ -97,14 +98,16 @@ document.getElementById("btn-spin").addEventListener("click", (e) => {
   }
 });
 
-// spinGlobe();
+spinGlobe();
 
-async function zoomToLatLng() {
-  const { lat, lng } = await getCurrentLocationLatLng();
-  map.flyTo({
-    center: [lng, lat],
-    zoom: 4,
-    essential: true,
-  });
-}
-zoomToLatLng();
+// Zooms to user position
+
+// async function zoomToLatLng() {
+//   const { lat, lng } = await getCurrentLocationLatLng();
+//   map.flyTo({
+//     center: [lng, lat],
+//     zoom: 4,
+//     essential: true,
+//   });
+// }
+// zoomToLatLng();
