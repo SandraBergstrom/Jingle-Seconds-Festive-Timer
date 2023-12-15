@@ -61,81 +61,11 @@ const x = setInterval(function () {
 }, 1000);
 
 // Converts location into lat.lng
-export async function getCurrentLocationLatLng(lat, lng) {
+export async function getCurrentLocationLatLng() {
   try {
-    // const position = await getCurrentLocation();
-    // const lat = position.coords.latitude;
-    // const lng = position.coords.longitude;
-
-    const { data } = await fetchAPI(lat, lng);
-
-    const { geoCodeData, timezoneData } = data;
-
-    console.log("geodata", geoCodeData);
-    console.log("timezone", timezoneData);
-
-    const countryCodeResult = geoCodeData.results.find((result) =>
-      result.address_components.some((component) =>
-        component.types.includes("country")
-      )
-    );
-
-    const countryCode = countryCodeResult?.address_components.find(
-      (component) => component.types.includes("country")
-    )?.short_name;
-
-    const countryResult = geoCodeData.results.find((result) =>
-      result.address_components.some((component) =>
-        component.types.includes("country")
-      )
-    );
-
-    const country = countryResult?.address_components.find((component) =>
-      component.types.includes("country")
-    )?.long_name;
-
-    console.log("Country:", country);
-
-    console.log("Code", countryCode);
-
-    const countryInfoResponse = await fetch(
-      `https://restcountries.com/v3.1/alpha/${countryCode}`
-    );
-    const countryInfo = await countryInfoResponse.json();
-
-    const { dstOffset, rawOffset } = timezoneData;
-
-    const currentTime = Date.now();
-    const totalOffsetMilliseconds = dstOffset
-      ? dstOffset * 1000
-      : rawOffset * 1000;
-    const countryTime = new Date(currentTime + totalOffsetMilliseconds);
-
-    localCountryTimeElement.innerHTML;
-
-    const distance = newYearDate - countryTime;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    localCountryTimeElement.innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-    console.log(countryInfo[0]);
-
-    const flagSrc = countryInfo[0]?.flags?.svg;
-
-    flagElement.src = flagSrc;
-
-    selectedCountryElement.innerText = countryInfo[0]?.name?.common;
-
-    // const { dstOffset } = data;
-
-    // setUpTimer(dstOffset);
+    const position = await getCurrentLocation();
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
 
     return { lat, lng };
   } catch (error) {
@@ -167,7 +97,71 @@ async function fetchAPI(lat, lng) {
     body: JSON.stringify({ lat, lng }),
   });
 
-  const data = await response.json();
+  const { data } = await response.json();
+
+  const { geoCodeData, timezoneData } = data;
+
+  console.log("geodata", geoCodeData);
+  console.log("timezone", timezoneData);
+
+  const countryCodeResult = geoCodeData.results.find((result) =>
+    result.address_components.some((component) =>
+      component.types.includes("country")
+    )
+  );
+
+  const countryCode = countryCodeResult?.address_components.find((component) =>
+    component.types.includes("country")
+  )?.short_name;
+
+  const countryResult = geoCodeData.results.find((result) =>
+    result.address_components.some((component) =>
+      component.types.includes("country")
+    )
+  );
+
+  const country = countryResult?.address_components.find((component) =>
+    component.types.includes("country")
+  )?.long_name;
+
+  console.log("Country:", country);
+
+  console.log("Code", countryCode);
+
+  const countryInfoResponse = await fetch(
+    `https://restcountries.com/v3.1/alpha/${countryCode}`
+  );
+  const countryInfo = await countryInfoResponse.json();
+
+  const { dstOffset, rawOffset } = timezoneData;
+
+  const currentTime = Date.now();
+  const totalOffsetMilliseconds = dstOffset
+    ? dstOffset * 1000
+    : rawOffset * 1000;
+  const countryTime = new Date(currentTime + totalOffsetMilliseconds);
+
+  localCountryTimeElement.innerHTML;
+
+  const distance = newYearDate - countryTime;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  localCountryTimeElement.innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+  console.log(countryInfo[0]);
+
+  const flagSrc = countryInfo[0]?.flags?.svg;
+
+  flagElement.src = flagSrc;
+
+  selectedCountryElement.innerText = countryInfo[0]?.name?.common;
 
   return data;
 }

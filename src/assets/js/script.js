@@ -1,5 +1,5 @@
 import mapboxgl from "mapbox-gl";
-import { getCurrentLocationLatLng } from "./countdown";
+import { getCurrentLocationLatLng, fetchAPI } from "./countdown";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmFybmVzbG93IiwiYSI6ImNsMGUyeHV6MDBmMGYzanBybDIyZ3BvOTQifQ.orwWz3XDibvdJSe_tfAxEA";
@@ -79,7 +79,7 @@ map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
 
   // FUNCTION RUNS WITH BACKEND SERVER
-  // getCurrentLocationLatLng(lat, lng);
+  // fetchAPI(lat, lng);
 
   map.flyTo({
     center: [lng, lat],
@@ -102,13 +102,12 @@ document.getElementById("btn-spin").addEventListener("click", (e) => {
 spinGlobe();
 
 // Zooms to user position
-
-// async function zoomToLatLng() {
-//   const { lat, lng } = await getCurrentLocationLatLng();
-//   map.flyTo({
-//     center: [lng, lat],
-//     zoom: 4,
-//     essential: true,
-//   });
-// }
-// zoomToLatLng();
+async function zoomToLatLng() {
+  const { lat, lng } = await getCurrentLocationLatLng();
+  map.flyTo({
+    center: [lng, lat],
+    zoom: 4,
+    essential: true,
+  });
+}
+zoomToLatLng();
