@@ -94,3 +94,7 @@ body {
 .fact-image {
   max-width: 250px;
 }
+
+.location-image {
+  max-width: 100%;
+}
