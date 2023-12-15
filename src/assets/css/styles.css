@@ -48,27 +48,27 @@ p {
   position: relative;
 }
 
-.map-container h1 {
+.map-container h1, .map-container h2 {
   position: absolute;
   margin: auto; 
   z-index: 1;
   text-shadow: 2px 2px 4px #000000b0;
   padding: 10px;
   font-weight: 400;
-  font-size: 2.5em;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-#map {
-  width: 100%;
-  height: 75vh;
-  overflow: hidden;
+#countdown {
+  font-weight: bolder;
+  top: 85px;
+  color: var(--accent-champagne);
 }
 
-#countdown {
-  font-size: 2rem;
-  font-weight: bolder;
+#map {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
 }
 
 #flag {
@@ -147,4 +147,13 @@ p {
 
 .fact-image {
   max-width: 250px;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  #map {
+    height: 75vh;
+  }
 }
