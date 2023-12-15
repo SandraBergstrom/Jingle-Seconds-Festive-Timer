@@ -1,4 +1,7 @@
 /* basic styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
+
 :root {
   --dark-blue: #032642;
   --lighter-blue: #095491;
@@ -16,8 +19,9 @@
 body {
   display: flex;
   flex-direction: column;
-  background: #f1f1f1;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: var(--off-white);
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: 'Playfair', 'Times New Roman', Times, serif;
 }
 
 /* Home Page */
@@ -38,24 +42,55 @@ body {
 }
 
 .btn-blue {
-  background-color: #095491;
-  color: #f1f1f1;
+  background-color: var(--lighter-blue);
+  color: var(--off-white);
   padding: 7px;
   border-radius: 5px;
 }
 
 .btn-blue:active {
-  background-color: #032642;
+  background-color: var(--dark-blue);
 }
 
 .timer-container {
-  background-color: #9da6af;
+  /* From https://css.glass */
+  background: rgba(214, 213, 213, 0.65);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(214, 213, 213, 1);
   border-radius: 5px;
-  box-shadow: #4b4848 3px 2px 11px 1px;
+  box-shadow: 6px 4px 17px 0px #e5e3e3;
 }
 
 /* Navbar */
 
 .header-nav {
   background-color: #032642;
+}
+
+.nav-item .nav-link {
+  color: var(--off-white);
+}
+
+/* Country pages */
+#timer-image {
+  background-image: url(../images/counter-background.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+  font-size: 6vw;
+}
+
+.fact-image {
+  max-width: 250px;
 }
