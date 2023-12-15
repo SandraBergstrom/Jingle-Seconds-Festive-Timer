@@ -78,7 +78,8 @@ map.on("moveend", () => {
 map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
 
-  getCurrentLocationLatLng(lat, lng);
+  // FUNCTION RUNS WITH BACKEND SERVER
+  // getCurrentLocationLatLng(lat, lng);
 
   map.flyTo({
     center: [lng, lat],
