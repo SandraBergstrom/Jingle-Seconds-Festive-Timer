@@ -1,8 +1,6 @@
 import mapboxgl from "mapbox-gl";
 import { getCurrentLocationLatLng } from "./countdown";
 
-console.log(getCurrentLocationLatLng);
-
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmFybmVzbG93IiwiYSI6ImNsMGUyeHV6MDBmMGYzanBybDIyZ3BvOTQifQ.orwWz3XDibvdJSe_tfAxEA";
 
@@ -78,6 +76,16 @@ map.on("moveend", () => {
   spinGlobe();
 });
 
+map.on("click", (e) => {
+  const { lng, lat } = e.lngLat;
+
+  map.flyTo({
+    center: [lng, lat],
+    zoom: 4,
+    essential: true,
+  });
+});
+
 document.getElementById("btn-spin").addEventListener("click", (e) => {
   spinEnabled = !spinEnabled;
   if (spinEnabled) {
@@ -95,8 +103,8 @@ async function zoomToLatLng() {
   const { lat, lng } = await getCurrentLocationLatLng();
   map.flyTo({
     center: [lng, lat],
-    zoom: 4, // Adjust the desired zoom level
-    essential: true, // This animation is considered essential with regards to prefers-reduced-motion media query
+    zoom: 4,
+    essential: true,
   });
 }
 zoomToLatLng();
