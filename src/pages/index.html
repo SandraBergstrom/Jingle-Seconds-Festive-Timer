@@ -11,8 +11,35 @@
 
   <link rel="stylesheet" href="/src/assets/css/styles.css" />
 
-  <!-- Fontawesom -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Fontawesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Favicons -->
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="76x76"
+      href="../assets/images/favicons/icons8-fireworks-emoji-76.png"
+    />
+  </head>
 
   <!-- Favicons -->
   <link type="image/png" sizes="16x16" rel="icon" href="../assets/images/favicons/icons8-fireworks-emoji-16.png" />
@@ -50,16 +77,51 @@
                 Countries
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Ireland</a></li>
+                <li><a class="dropdown-item" href="greece.html">Greece</a></li>
+                <li><a class="dropdown-item" href="india.html">India</a></li>
+                <li><a class="dropdown-item" href="ireland.html">Ireland</a></li>
+                <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                <li><a class="dropdown-item" href="poland.html">Poland</a></li>
                 <li><a class="dropdown-item" href="spain.html">Spain</a></li>
-                <li>
-                  <a class="dropdown-item" href="poland.html">Poland</a>
-                </li>
+
               </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Team</a>
             </li>
 
           </ul>
         </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="row d-flex justify-content-center">
+      <!-- Map -->
+      <div class="col-12 col-sm-12 d-flex align-items-center flex-column map-container">
+        <h1 class="my-3 text-center">Global New Year Countdowns</h1>
+        <h2 id="countdown"></h2>
+        <div id="map"></div>
+      </div>
+    </div>
+    <button id="btn-spin" class="mx-auto btn-blue">
+      <i class="fas fa-pause" id="pause-icon"></i>
+      <i class="fas fa-play" id="play-icon" style="display: none;"></i>
+    </button>
+    <!-- Counter -->
+    <!-- <div class="row custom-row text-center counter-container justify-content-center m-5" id="counter-row"> -->
+    <div class="row text-center mt-3" id="country-counter-container">
+      <!-- Flag -->
+      <div class="col-12 col-md-3">
+        <img src="https://flagcdn.com/ie.svg" id="flag" />
+      </div>
+
+      
+      <!-- Country Name -->
+      <div class="text-center col-12 col-md-3">
+        <h3 id="selectedCountry">SwedenTEST</h3>
+        <h3 id="localCountryTime">00:20:22</h3>
       </div>
     </nav>
   </header>
@@ -126,7 +188,6 @@
 
   <script type="module" src="/src/assets/js/countdown.js"></script>
   <script type="module" src="/src/assets/js/script.js"></script>
-  <script type="module" src="/src/assets/js/togglePlay.js"></script>
-</body>
-
+   <script type="module" src="/src/assets/js/togglePlay.js"></script>
+  </body>
 </html>
