@@ -164,7 +164,7 @@ p {
     top: 65px;
   }
 
-  .row>* {
+  .custom-row>* {
     /* remove flex-shrink: 0 */
     flex: 1 1 0;
   }
