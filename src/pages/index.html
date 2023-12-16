@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="/src/assets/css/styles.css" />
 
+    <!-- Fontawesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Favicons -->
     <link
       type="image/png"
@@ -92,36 +95,43 @@
         <h1 class="my-3 text-center">Global New Year Countdowns</h1>
         <h2 id="countdown"></h2>
         <div id="map"></div>
-        <button id="btn-spin" class="mx-auto btn-blue">
-          Pause rotation
-        </button>
       </div>
     </div>
+    <button id="btn-spin" class="mx-auto btn-blue">
+      <i class="fas fa-pause" id="pause-icon"></i>
+      <i class="fas fa-play" id="play-icon" style="display: none;"></i>
+    </button>
     <!-- Counter -->
-    <div class="row custom-row text-center counter-container justify-content-center m-5" id="counter-row">
-      <img src="https://flagcdn.com/ie.svg" id="flag" />
-      <div class="">
-        <h3 id="selectedCountry"></h3>
-        <h3 id="localCountryTime"></h3>
+    <!-- <div class="row custom-row text-center counter-container justify-content-center m-5" id="counter-row"> -->
+    <div class="row text-center mt-3" id="country-counter-container">
+      <!-- Flag -->
+      <div class="col-12 col-md-3">
+        <img src="https://flagcdn.com/ie.svg" id="flag" />
       </div>
       
-      <h2 class="my-3">New Year Countdown</h2>
-      <div class="col-10 d-flex justify-content-center">
-        <div class="px-3 mx-3 d-flex flex-column timer-container">
-          <div id="days" class="fw-bold">20</div>
-          <div class>Days</div>
+      <!-- Country Name -->
+      <div class="text-center col-12 col-md-3">
+        <h3 id="selectedCountry">SwedenTEST</h3>
+        <h3 id="localCountryTime">00:20:22</h3>
+      </div>
+
+      <!-- Timer -->
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <div class="d-flex flex-column timer-container">
+          <div id="days" class="fw-bold m-1 px-3">20</div>
+          <div class="m-1">Days</div>
         </div>
-        <div class="px-3 mx-3 d-flex flex-column timer-container">
-          <div id="hours" class="fw-bold">20</div>
-          <div>Hours</div>
+        <div class="d-flex flex-column timer-container mx-1">
+          <div id="hours" class="fw-bold m-1 px-3">20</div>
+          <div class="m-1">Hours</div>
         </div>
-        <div class="px-3 mx-3 d-flex flex-column timer-container">
-          <div id="minutes" class="fw-bold">20</div>
-          <div>Min</div>
+        <div class="d-flex flex-column timer-container">
+          <div id="minutes" class="fw-bold m-1 px-3">20</div>
+          <div class="m-1">Min</div>
         </div>
-        <div class="px-3 mx-3 d-flex flex-column timer-container">
-          <div id="seconds" class="fw-bold">20</div>
-          <div>Sec</div>
+        <div class="d-flex flex-column timer-container">
+          <div id="seconds" class="fw-bold m-1 px-3">20</div>
+          <div class="m-1">Sec</div>
         </div>
       </div>
     </div>
@@ -138,5 +148,6 @@
 
     <script type="module" src="/src/assets/js/countdown.js"></script>
     <script type="module" src="/src/assets/js/script.js"></script>
+    <script type="module" src="/src/assets/js/togglePlay.js"></script>
   </body>
 </html>
