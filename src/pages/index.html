@@ -51,45 +51,34 @@
             ><strong>Festive</strong>Timer</a
           >
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Countries
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Ireland</a></li>
-                  <li><a class="dropdown-item" href="spain.html">Spain</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Countries
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Ireland</a></li>
+                <li><a class="dropdown-item" href="spain.html">Spain</a></li>
                   <li>
                     <a class="dropdown-item" href="poland.html">Poland</a>
                   </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
+              </ul>
+            </li>
+        
             </ul>
           </div>
         </div>
@@ -119,44 +108,49 @@
           </div>
         </div>
 
-        <!-- Map -->
-        <div class="col-12 col-md-10 d-flex align-items-center flex-column">
-          <div id="map"></div>
-          <button id="btn-spin" class="mx-auto mt-3 btn-blue">
-            Pause rotation
-          </button>
-        </div>
+ <main>
+    <div class="row d-flex justify-content-center">
+      <!-- Map -->
+      <div class="col-12 col-sm-12 d-flex align-items-center flex-column map-container">
+        <h1 class="my-3 text-center">Global New Year Countdowns</h1>
+        <h2 id="countdown"></h2>
+        <div id="map"></div>
+        <button id="btn-spin" class="mx-auto btn-blue">
+          Pause rotation
+        </button>
       </div>
-      <!-- Counter -->
-      <div
-        class="row text-center counter-container justify-content-center mt-5"
-      >
+    </div>
+    <!-- Counter -->
+    <div class="row text-center counter-container justify-content-center m-5" id="counter-row">
+      <img src="https://flagcdn.com/ie.svg" id="flag" />
+      <div class="">
         <h3 id="selectedCountry"></h3>
         <h3 id="localCountryTime"></h3>
-        <img src="https://flagcdn.com/ie.svg" id="flag" />
-
-        <h2 class="my-3">New Year Countdown</h2>
-        <div class="col-10 d-flex justify-content-center">
-          <div class="px-3 mx-3 d-flex flex-column timer-container">
-            <div id="days" class="fw-bold">20</div>
-            <div class>Days</div>
-          </div>
-          <div class="px-3 mx-3 d-flex flex-column timer-container">
-            <div id="hours" class="fw-bold">20</div>
-            <div>Hours</div>
-          </div>
-          <div class="px-3 mx-3 d-flex flex-column timer-container">
-            <div id="minutes" class="fw-bold">20</div>
-            <div>Min</div>
-          </div>
-          <div class="px-3 mx-3 d-flex flex-column timer-container">
-            <div id="seconds" class="fw-bold">20</div>
-            <div>Sec</div>
-          </div>
+      </div>
+      
+      <h2 class="my-3">New Year Countdown</h2>
+      <div class="col-10 d-flex justify-content-center">
+        <div class="px-3 mx-3 d-flex flex-column timer-container">
+          <div id="days" class="fw-bold">20</div>
+          <div class>Days</div>
+        </div>
+        <div class="px-3 mx-3 d-flex flex-column timer-container">
+          <div id="hours" class="fw-bold">20</div>
+          <div>Hours</div>
+        </div>
+        <div class="px-3 mx-3 d-flex flex-column timer-container">
+          <div id="minutes" class="fw-bold">20</div>
+          <div>Min</div>
+        </div>
+        <div class="px-3 mx-3 d-flex flex-column timer-container">
+          <div id="seconds" class="fw-bold">20</div>
+          <div>Sec</div>
         </div>
       </div>
-      <!-- End Counter -->
-    </main>
+    </div>
+    <!-- End Counter -->
+  </main>
+
 
     <!-- BOOTSTRAP SCRIPT -->
     <script
