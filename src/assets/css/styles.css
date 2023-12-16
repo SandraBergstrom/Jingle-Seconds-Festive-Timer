@@ -38,6 +38,12 @@ h2 {
   color: var(--dark-blue);
 }
 
+#selectedCountry,
+#localCountryTime {
+  font-size: calc(1rem + .4vw);
+  color: var(--accent-champagne);
+}
+
 p {
   font-family: var(--font-family);
   color: var(--dark-blue);
@@ -94,11 +100,7 @@ p {
   display: inline-block;
   font-family: var(--font-family);
   color: var(--accent-champagne);
-  background: linear-gradient(
-    to right,
-    var(--dark-blue) 0%,
-    var(--lighter-blue) 100%
-  );
+  background: linear-gradient(to right, var(--dark-blue) 0%, var(--lighter-blue) 100%);
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
@@ -107,11 +109,7 @@ p {
 }
 
 #btn-spin:hover {
-  background: linear-gradient(
-    to right,
-    var(--off-white) 0%,
-    var(--accent-champagne) 100%
-  );
+  background: linear-gradient(to right, var(--off-white) 0%, var(--accent-champagne) 100%);
   color: var(--dark-blue);
 }
 
@@ -125,7 +123,7 @@ p {
   border: 1px solid rgba(214, 213, 213, 1);
   border-radius: 5px;
   box-shadow: 6px 4px 17px 0px #e5e3e3;
-  width: 25%;
+  width: 20%;
 }
 
 /* Navbar */
@@ -157,7 +155,7 @@ p {
 #hours,
 #minutes,
 #seconds {
-  font-size: 6vw;
+  font-size: 4vw;
 }
 
 .fact-image {
@@ -183,42 +181,33 @@ p {
 @media (min-width: 768px) {
   #map {
     height: calc(100vh - 4vh);
-    position: relative;
   }
+
   #countdown {
     top: 65px;
   }
 
-  .custom-row > * {
-    /* remove flex-shrink: 0 */
-    flex: 1 1 0;
-  }
-
-
-  #counter-row {
-    display: flex;
+  #country-counter-container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: absolute; /* Assuming you want to overlay this on the map */
+    margin: 0;
+    bottom: 5px; /* Or adjust as needed to position it */
+    left: 0; /* Add this to ensure it's horizontally centered */
+    right: 0; /* Add this as well */
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* This will center the child divs horizontally */
   }
+
   #flag {
     border-radius: 5px;
     width: 100%;
     height: auto;
+    margin-left: 25px;
+  }
 
-  }
-  #country-counter-container {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    position: relative;
-    margin: auto;
-    position: absolute;
-    margin: 0;
-    bottom: 5px;
-    align-items: center;
-  }
   #btn-spin {
     bottom: 28vh;
-    left: 25px;
-    position: absolute;
+    left: 40px;
   }
 }

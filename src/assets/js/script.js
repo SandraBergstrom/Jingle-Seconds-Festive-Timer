@@ -93,14 +93,26 @@ map.on("click", (e) => {
   });
 });
 
-document.getElementById("btn-spin").addEventListener("click", (e) => {
+// document.getElementById("btn-spin").addEventListener("click", (e) => {
+//   spinEnabled = !spinEnabled;
+//   if (spinEnabled) {
+//     spinGlobe();
+//     e.target.innerHTML = "Pause rotation";
+//   } else {
+//     map.stop(); // Immediately end ongoing animation
+//     e.target.innerHTML = "Start rotation";
+//   }
+// });
+
+// Removed the e.target.innerHTML to prevent the button from changing text
+// when clicked. In html there is now icons instead and a seperate function
+// to toggle the icons. 
+document.getElementById("btn-spin").addEventListener("click", () => {
   spinEnabled = !spinEnabled;
   if (spinEnabled) {
     spinGlobe();
-    e.target.innerHTML = "Pause rotation";
   } else {
     map.stop(); // Immediately end ongoing animation
-    e.target.innerHTML = "Start rotation";
   }
 });
 
