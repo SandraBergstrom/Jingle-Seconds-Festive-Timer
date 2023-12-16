@@ -3,56 +3,121 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Animation for the first row
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.fact-container',
-    scrub: 1,
-    start: 'top 55%',
-    end: '+=100%',
-  },
-});
+let mm = gsap.matchMedia();
 
-// Staggered animation for elements on the left
-gsap.utils.toArray('.left-anim').forEach((elem, index) => {
-  tl.from(elem, {
-    x: '-100%',
-    opacity: 0,
-    duration: 1,
+mm.add('(min-width: 800px)', () => {
+  // Desktop setup
+  let tlDesktopLeft = gsap.timeline({
     scrollTrigger: {
-      trigger: elem,
+      trigger: '.fact-container',
+      start: 'top 2%',
+      end: '+=10%',
+    },
+  });
+
+  gsap.utils.toArray('.left-anim').forEach((elem, index) => {
+    tlDesktopLeft.from(elem, {
+      x: '-100%',
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: elem,
+        scrub: 1,
+        start: 'top bottom+=100',
+        end: '+=100%',
+      },
+      ease: 'power1.inOut',
+      delay: index * 0.2,
+    });
+  });
+
+  let tlDesktopRight = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.fact-container2',
       scrub: 1,
-      start: 'top bottom+=100',
+      start: 'top bottom',
       end: '+=100%',
     },
-    ease: 'power1.inOut',
-    delay: index * 0.2,
   });
+
+  gsap.utils.toArray('.right-anim').forEach((elem, index) => {
+    tlDesktopRight.from(elem, {
+      x: '100vw',
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: elem,
+        scrub: 1,
+        start: 'top bottom+=100',
+        end: '+=100%',
+      },
+      ease: 'power1.inOut',
+      delay: index * 0.2,
+    });
+  });
+
+  return () => {
+    //Kill the timeline when the media query doesn't match
+    tlDesktopLeft.kill();
+    tlDesktopRight.kill();
+  };
 });
 
-// Animation for the second row
-let tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.fact-container2',
-    scrub: 1,
-    start: 'top bottom',
-    end: '+=100%',
-  },
-});
-
-// Staggered animation for elements on the right
-gsap.utils.toArray('.right-anim').forEach((elem, index) => {
-  tl2.from(elem, {
-    x: '100vw',
-    opacity: 0,
-    duration: 1,
+mm.add('(max-width: 799px)', () => {
+  // Mobile setup
+  let tlMobileLeft = gsap.timeline({
     scrollTrigger: {
-      trigger: elem,
+      trigger: '.fact-container',
       scrub: 1,
-      start: 'top bottom+=100',
+      start: 'top 2%',
+      end: '+=10%',
+    },
+  });
+
+  gsap.utils.toArray('.left-anim').forEach((elem, index) => {
+    tlMobileLeft.from(elem, {
+      x: '-100%',
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: elem,
+        scrub: 1,
+        start: 'top bottom+=100',
+        end: '+=100%',
+      },
+      ease: 'power1.inOut',
+      delay: index * 0.2,
+    });
+  });
+
+  let tlMobileRight = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.fact-container2',
+      scrub: 1,
+      start: 'top bottom',
       end: '+=100%',
     },
-    ease: 'power1.inOut',
-    delay: index * 0.2,
   });
+
+  gsap.utils.toArray('.right-anim').forEach((elem, index) => {
+    tlMobileRight.from(elem, {
+      x: '0%',
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: elem,
+        scrub: 1,
+        start: 'top bottom+=100',
+        end: '+=100%',
+      },
+      ease: 'power1.inOut',
+      delay: index * 0.2,
+    });
+  });
+
+  return () => {
+    // Kill the timeline when the media query doesn't match
+    tlMobileLeft.kill();
+    tlMobileRight.kill();
+  };
 });
