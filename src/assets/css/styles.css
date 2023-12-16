@@ -137,8 +137,13 @@ p {
   margin-top: 5px;
 }
 
+.navbar-brand {
+  font-size: 24px;
+}
+
 .nav-item .nav-link {
   color: var(--off-white);
+  font-size: 18px;
 }
 
 /* Country pages */
@@ -179,8 +184,15 @@ p {
 /* Media Queries */
 
 @media (min-width: 768px) {
+  .navbar-brand {
+    font-size: 32px;
+  }
+  
+  .nav-item .nav-link {
+    font-size: 18px;
+  }
   #map {
-    height: calc(100vh - 4vh);
+    height: 90vh;
   }
 
   #countdown {
@@ -192,7 +204,7 @@ p {
     flex-direction: row;
     position: absolute; 
     margin: 0;
-    bottom: 5px; 
+    bottom: 35px; 
     left: 0; 
     right: 0; 
     align-items: center;
