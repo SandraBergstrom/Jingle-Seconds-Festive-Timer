@@ -1,15 +1,14 @@
-import getTimeDifference from "./countdownLocalized";
+import getTimeDifference from './countdownLocalized';
 
-const newYearDate = new Date("Jan 1, 2024 00:00:00").getTime();
+const newYearDate = new Date('Jan 1, 2024 00:00:00').getTime();
 
-const localCountryTimeElement = document.getElementById("localCountryTime");
-const flagElement = document.getElementById("flag");
-const selectedCountryElement = document.getElementById("selectedCountry");
-const daysElement = document.getElementById("days");
-const hoursElement = document.getElementById("hours");
-const minutesElement = document.getElementById("minutes");
-const secondsElement = document.getElementById("seconds");
-
+const localCountryTimeElement = document.getElementById('localCountryTime');
+const flagElement = document.getElementById('flag');
+const selectedCountryElement = document.getElementById('selectedCountry');
+const daysElement = document.getElementById('days');
+const hoursElement = document.getElementById('hours');
+const minutesElement = document.getElementById('minutes');
+const secondsElement = document.getElementById('seconds');
 
 function setUpTimer(dstOffset) {
   const x = setInterval(function () {
@@ -111,7 +110,7 @@ function startTimer(id) {
 }
 
 export async function displayGeolocationData(geoCodeData, timezoneData) {
-  const id = timezoneData.timeZoneId.split("/");
+  const id = timezoneData.timeZoneId.split('/');
 
   startTimer(id);
 
@@ -165,7 +164,7 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   localCountryTimeElement.innerHTML =
-    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
   const flagSrc = countryInfo[0]?.flags?.svg;
 

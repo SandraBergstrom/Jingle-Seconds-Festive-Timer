@@ -2,13 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
 :root {
   --dark-blue: #031023;
   --lighter-blue: #153c75;
   --off-white: #f1f1f1;
   --accent-champagne: #f7e7ce;
-  
+
   --font-family: Verdana, Tahoma, sans-serif;
   --font-family-heading: 'Roboto', sans-serif;
 }
@@ -25,6 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--off-white);
+  overflow-x: hidden;
   /* font-family: 'Playfair', 'Times New Roman', Times, serif; */
 }
 
@@ -48,9 +48,10 @@ p {
   position: relative;
 }
 
-.map-container h1, .map-container h2 {
+.map-container h1,
+.map-container h2 {
   position: absolute;
-  margin: auto; 
+  margin: auto;
   z-index: 1;
   text-shadow: 2px 2px 4px #000000b0;
   padding: 10px;
@@ -93,7 +94,11 @@ p {
   display: inline-block;
   font-family: var(--font-family);
   color: var(--accent-champagne);
-  background: linear-gradient(to right, var(--dark-blue) 0%, var(--lighter-blue) 100%);
+  background: linear-gradient(
+    to right,
+    var(--dark-blue) 0%,
+    var(--lighter-blue) 100%
+  );
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
@@ -102,7 +107,11 @@ p {
 }
 
 #btn-spin:hover {
-  background: linear-gradient(to right, var(--off-white) 0%, var(--accent-champagne) 100%);
+  background: linear-gradient(
+    to right,
+    var(--off-white) 0%,
+    var(--accent-champagne) 100%
+  );
   color: var(--dark-blue);
 }
 
@@ -164,7 +173,7 @@ p {
     top: 65px;
   }
 
-  .custom-row>* {
+  .custom-row > * {
     /* remove flex-shrink: 0 */
     flex: 1 1 0;
   }
@@ -175,4 +184,3 @@ p {
     justify-content: center;
   }
 }
-
