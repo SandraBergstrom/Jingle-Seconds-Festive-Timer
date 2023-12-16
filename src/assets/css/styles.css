@@ -149,6 +149,9 @@ p {
   max-width: 250px;
 }
 
+.location-image {
+  max-width: 100%;
+}
 
 /* Media Queries */
 
@@ -172,3 +175,4 @@ p {
     justify-content: center;
   }
 }
+
