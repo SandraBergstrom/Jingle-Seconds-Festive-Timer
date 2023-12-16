@@ -38,6 +38,12 @@ h2 {
   color: var(--dark-blue);
 }
 
+#selectedCountry,
+#localCountryTime {
+  font-size: calc(1rem + .4vw);
+  color: var(--accent-champagne);
+}
+
 p {
   font-family: var(--font-family);
   color: var(--dark-blue);
@@ -197,10 +203,11 @@ p {
     border-radius: 5px;
     width: 100%;
     height: auto;
+    margin-left: 25px;
   }
 
   #btn-spin {
     bottom: 28vh;
-    left: 25px;
+    left: 40px;
   }
 }
