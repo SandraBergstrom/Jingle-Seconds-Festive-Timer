@@ -190,13 +190,13 @@ p {
   #country-counter-container {
     flex-wrap: nowrap;
     flex-direction: row;
-    position: absolute; /* Assuming you want to overlay this on the map */
+    position: absolute; 
     margin: 0;
-    bottom: 5px; /* Or adjust as needed to position it */
-    left: 0; /* Add this to ensure it's horizontally centered */
-    right: 0; /* Add this as well */
+    bottom: 5px; 
+    left: 0; 
+    right: 0; 
     align-items: center;
-    justify-content: center; /* This will center the child divs horizontally */
+    justify-content: center; 
   }
 
   #flag {
