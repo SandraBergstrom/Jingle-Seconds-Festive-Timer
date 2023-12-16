@@ -1,8 +1,15 @@
-const newYearDate = new Date('Jan 1, 2024 00:00:00').getTime();
+import getTimeDifference from "./countdownLocalized";
 
-const localCountryTimeElement = document.getElementById('localCountryTime');
-const flagElement = document.getElementById('flag');
-const selectedCountryElement = document.getElementById('selectedCountry');
+const newYearDate = new Date("Jan 1, 2024 00:00:00").getTime();
+
+const localCountryTimeElement = document.getElementById("localCountryTime");
+const flagElement = document.getElementById("flag");
+const selectedCountryElement = document.getElementById("selectedCountry");
+const daysElement = document.getElementById("days");
+const hoursElement = document.getElementById("hours");
+const minutesElement = document.getElementById("minutes");
+const secondsElement = document.getElementById("seconds");
+
 
 function setUpTimer(dstOffset) {
   const x = setInterval(function () {
@@ -87,8 +94,27 @@ async function getCurrentLocation() {
     }
   });
 }
+let intervalId;
+
+function startTimer(id) {
+  // Clear the previous timer, if any
+  clearInterval(intervalId);
+
+  // Set a new interval and store the ID
+  intervalId = setInterval(() => {
+    const time = getTimeDifference(id[0], id[1]);
+    daysElement.innerHTML = `${time.days}`;
+    hoursElement.innerHTML = `${time.hours}`;
+    minutesElement.innerHTML = `${time.minutes}`;
+    secondsElement.innerHTML = `${Math.trunc(time.seconds)}`;
+  }, 1000); // Adjust the interval duration as needed
+}
 
 export async function displayGeolocationData(geoCodeData, timezoneData) {
+  const id = timezoneData.timeZoneId.split("/");
+
+  startTimer(id);
+
   const countryCodeResult = geoCodeData?.results.find((result) =>
     result.address_components.some((component) =>
       component.types.includes('country')
@@ -117,31 +143,29 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
   );
   const countryInfo = await countryInfoResponse.json();
 
-  console.log(countryInfo);
-
   // TIMEZONE DISABLED DURING TESTING
 
-  // const { dstOffset, rawOffset } = timezoneData;
+  const { dstOffset, rawOffset } = timezoneData;
 
-  // const currentTime = Date.now();
-  // const totalOffsetMilliseconds = dstOffset
-  //   ? dstOffset * 1000
-  //   : rawOffset * 1000;
-  // const countryTime = new Date(currentTime + totalOffsetMilliseconds);
+  const currentTime = Date.now();
+  const totalOffsetMilliseconds = dstOffset
+    ? dstOffset * 1000
+    : rawOffset * 1000;
+  const countryTime = new Date(currentTime + totalOffsetMilliseconds);
 
-  // localCountryTimeElement.innerHTML;
+  localCountryTimeElement.innerHTML;
 
-  // const distance = newYearDate - countryTime;
+  const distance = newYearDate - countryTime;
 
-  // const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  // const hours = Math.floor(
-  //   (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  // );
-  // const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // localCountryTimeElement.innerHTML =
-  //   days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  localCountryTimeElement.innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
   const flagSrc = countryInfo[0]?.flags?.svg;
 
