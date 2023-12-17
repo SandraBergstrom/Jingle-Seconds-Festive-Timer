@@ -267,6 +267,16 @@ p {
   cursor: pointer;
 }
 
+/* 404 page */
+.shadow-container {
+  border: 1px solid rgba(214, 213, 213, 1);
+  border-radius: 5px;
+  box-shadow: 6px 4px 17px 0px #e5e3e3;
+}
+
+.btn-light {
+  background-color: var(--off-white);
+}
 /* Media Queries */
 
 @media (min-width: 768px) {
