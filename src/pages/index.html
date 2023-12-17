@@ -78,12 +78,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
-              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -110,6 +104,9 @@
                   <li><a class="dropdown-item" href="spain.html">Spain</a></li>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -124,10 +121,9 @@
             class="col-12 col-sm-12 d-flex align-items-center flex-column map-container"
           >
             <h1 class="my-3 text-center">Global New Year Countdowns</h1>
-            <h2 id="countdown"></h2>
             <div id="map"></div>
           </div>
-          <button id="btn-spin" class="mx-auto">
+          <button id="btn-spin" class="mx-auto" aria-label="Pause/Play globe rotation">
             <i class="fas fa-pause" id="pause-icon"></i>
             <i class="fas fa-play" id="play-icon" style="display: none"></i>
           </button>
@@ -139,7 +135,7 @@
         <div class="row text-center mt-1" id="country-counter-container">
           <!-- Flag -->
           <div class="col-12 col-md-2">
-            <img src="https://flagcdn.com/ie.svg" id="flag" />
+            <img src="https://flagcdn.com/ie.svg" id="flag" alt="Countries flag" />
           </div>
 
           <!-- Country Name -->
