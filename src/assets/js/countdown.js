@@ -177,6 +177,7 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
 }
 
 export async function fetchGeolocationTimezoneData(lat, lng) {
+  console.log("FETCHING API - PLEASE USE CARFEULLY");
   const response = await fetch(
     "https://googlefetchapi-4209c876662c.herokuapp.com/api/timezone",
     {
