@@ -1,10 +1,9 @@
-
-# December Hackathon
-
-![Banner](/team-8/src/assets/images/docs/banner-s.webp)
 # Festive Timer
 
+
 [Hero Image]()
+
+
 
 # Introduction
 
@@ -52,7 +51,7 @@ Festive Timer is a user-friendly application designed for its users to access th
 The project was developed by using agile methodologies. The development cycle was divided into short sprints, where code was delivered in small chunks for flexibility and good coding practice.
 Furthermore, the branch system and forking was used to simulate real-life environment.
 
-The Kanban board was created to keep track of project progression and issues assessment. Issues were given acceptance criteria and were split into tasks if feasible.
+The Kanban board was created to keep track of project progression and issues assessment. Issues were given acceptance criteria and were split into tasks.
 
 
 #### Epics 
@@ -60,22 +59,22 @@ The Kanban board was created to keep track of project progression and issues ass
 1. Base Setup
 The base setup epic is for all stories needed for the base setup of the application.
 
-1. UI/UX
+2. UI/UX
 The UI/UX epic is for all stories related to prototyping and designing a user-friendly interface.
 
-1. World Map
+3. World Map
 The World Map epic is for all stories related to the world map and geolocation functionality.
 
-1. Countdown timer
+4. Countdown timer
 The Countdown timer epic for all stories needed for the countdown logic to work in different time zones.
 
-1. Standalone pages
+5. Standalone pages
 This epic is for all stories related to small pages and functionalities that don't have their epic.
 
-1. Deployment
+6. Deployment
 This epic is for deployment-related stories.
 
-1. Documentation
+7. Documentation
 This epic is for document-related stories. It provides essential documentation to give an insight into the development process.
 
 
@@ -118,10 +117,10 @@ This epic is for document-related stories. It provides essential documentation t
 
 ## The Scope Plane
 
-* Responsive design - website should support devices from 320px up
-* menu for mobile devices
-* Interactive World Map with countdown to New Year for each location
-* Trivia section for countries selected by team members
+* Responsive design - website should support devices from 320px and above.
+* menu should be accessible from mobile devices.
+* Interactive World Map with countdown to New Year for each location.
+* Trivia section for countries selected by team members.
 
 ## The Structure Plane
 
@@ -183,30 +182,29 @@ Implementation:
 ### Planned features
 - About page for business-oriented purposes
 
-## The Skeleton Plane
-
-### Wireframes
-
- As a Developer, I want to create mockups or wireframes for the webpage's UI/UX design to visualize its layout and structure
+# The Skeleton Plane
 
 
 # Wireframes
-
- ## Content
-  * Content 1
-  * Content 2
 
 
 # The Surface Plane
 
 ### Colour scheme
 
+
 ### Imagery 
 
 ### Fonts
 
+
+
 ## Testing
 Testing documentation can be found [here.](./TESTING.md)
+
+* No automated testing was done.
+* All testing was done manually by team members.
+* We ran our code through [HTML and CSS W3 schools validators](https://validator.w3.org/)
 
 ## Technologies and tools
 * HTML
@@ -246,7 +244,17 @@ Testing documentation can be found [here.](./TESTING.md)
 * Js Hint
     * JavaScript code validation
 
+
 ## Deployment
+
+* [The app was deployed to Github]()
+* 
+
+## Issues with deployment
+* 
+* 
+*
+
 ### Version control
 The website was created in Virtual Studio Code editor, and changes were pushed to the GitHub repository by using bash terminal. 
 
@@ -280,6 +288,7 @@ The following commands were used:
 3. Open Git Bash and change the working directory to the location where you want the cloned directory. 
 4. Type git clone and then paste the link.
 5. Press Enter to create your local clone.
+
 
 ## Credits
 
