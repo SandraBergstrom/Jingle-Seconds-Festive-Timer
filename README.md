@@ -1,6 +1,6 @@
 # Festive Timer
 
-[Hero Image]()
+![Hero Image](../Jingle-Seconds-Festive-Timer/readme/images/hero.png)
 
 Festive Timer is a user-friendly application designed for its users to access the New Year countdown timer appropriate for selected time zones and exciting pieces of trivia about pre-selected countries and places worth visiting.
 
@@ -19,12 +19,10 @@ Festive Timer is a user-friendly application designed for its users to access th
 -   [The Skeleton Plane](#the-skeleton-plane)
     - [Wireframes](#wireframes)
 -   [The Surface Plane](#the-surface-plane)
-    -   [Colour Scheme](#colour-scheme)
-    -   [Imagery](#imagery)
-    -   [Fonts](#Fonts)
 -   [Testing](#testing)
 -   [Technologies and Tools](#technologies-and-tools)
 -   [Deployment](#deployment)
+    -   [Deploy to Netlify](#deploy-to-netlify)
     -   [Version control](#version-control)
     -   [Creating A Fork](#creating-a-fork)
     -   [Cloning Repository](#cloning-repository)
@@ -48,25 +46,25 @@ The Kanban board was created to keep track of project progression and issues ass
 
 #### Epics 
 
-1. Base Setup
+1. **Base Setup**
 The base setup epic is for all stories needed for the base setup of the application.
 
-1. UI/UX
+1. **UI/UX**
 The UI/UX epic is for all stories related to prototyping and designing a user-friendly interface.
 
-1. World Map
+1. **World Map**
 The World Map epic is for all stories related to the world map and geolocation functionality.
 
-1. Countdown timer
+1. **Countdown timer**
 The Countdown timer epic for all stories needed for the countdown logic to work in different time zones.
 
-1. Standalone pages
+1. **Standalone pages**
 This epic is for all stories related to small pages and functionalities that don't have their epic.
 
-1. Deployment
+1. **Deployment**
 This epic is for deployment-related stories.
 
-1. Documentation
+1. **Documentation**
 This epic is for document-related stories. It provides essential documentation to give an insight into the development process.
 
 ### User Stories
@@ -76,8 +74,8 @@ This epic is for document-related stories. It provides essential documentation t
 - As a developer, I need to create a proper structure so everyone in the team can work independently without accessing the main branch.
 
 **EPIC 2: UI/UX**
-- As a Developer, I want to create mockups or wireframes for the webpage's UI/UX design to visualize its layout and structure.
-- As a User, I can navigate between different sections of the website so that I can easily access the information or features I need.
+- As a developer, I want to create mockups or wireframes for the webpage's UI/UX design to visualize its layout and structure.
+- As a user, I can navigate between different sections of the website so that I can easily access the information or features I need.
 
 **EPIC 3: Countdown timer**
 - As a user, I want to see a visual countdown timer, so that I can easily understand how much time is left until New Year in my selected location.
@@ -96,14 +94,14 @@ This epic is for document-related stories. It provides essential documentation t
 
 **EPIC 6: Standalone pages**
 - As a developer, I should create a team page introducing authors to application visitors.
-- As a User, I want to see a friendly and informative "404" error page when I encounter a broken link or reach a non-existent page on the website.
+- As a user, I want to see a friendly and informative "404" error page when I encounter a broken link or reach a non-existent page on the website.
 
 **EPIC 7: Deployment**
-- As a developer, I have to deploy the project so the users can visit the website and interact with the app
+- As a developer, I have to deploy the project so the users can visit the website and interact with the app.
 
 **EPIC 8: Documentation**
- - As a User and a Developer, I want to have a well-documented README.md file for this project so that I can easily understand its purpose, how to set it up, and how to use it effectively.
-- - As a User and a Developer, I want to have a well-documented TESTING.md file for this project so that I can easily understand its purpose, how to set it up, and how to use it effectively.
+ - As a user and a developer, I want to have a well-documented README.md file for this project so that I can easily understand its purpose, how to set it up, and how to use it effectively.
+- - As a user and a developer, I want to have a well-documented TESTING.md file for this project so that I can easily understand its purpose, how to set it up, and how to use it effectively.
 
 ## The Scope Plane
 * Responsive design - website should support devices from 320px up
@@ -122,13 +120,6 @@ Implementation:
 **Navigation menu** 
  * Navigation menu was implemented across all pages 
  * Hamburger menu is present to provide better support for mobile devices
-
-`Footer story`
-
-Implementation: 
-
-**Footer**
-* content
 
 `As a user, I want to see a visual countdown timer, so that I can easily understand how much time is left until New Year in my selected location.`
 
@@ -181,24 +172,16 @@ Implementation:
 <details>
 <summary>All wireframes</summary>
 
-* Content
-* Content 1
-* Content 2
-* Content 3
-* Content 4
-* Content 5
-* Content 6
+* ![Landing page](./readme/images/landing-page.png)
+* ![Country page](./readme/images/country.png)
+* ![Team page](./readme/images/team-page)
 
 </details>
 
-
 ## The Surface Plane
 
-### Colour scheme
-
-### Imagery 
-
-### Fonts
+Dark blue (#031023), light blue (#153c75), white(#f1f1f1) and light-brown (#f7e7ce) were chosen as primary colours for application.
+The main font of the application is Roboto font.
 
 ## Testing
 Testing documentation can be found [here.](./TESTING.md)
@@ -220,12 +203,16 @@ Testing documentation can be found [here.](./TESTING.md)
     * Animations
 * Luxon 
     * Dates handling 
-* Geocoding API
+* Google Geocoding API
     * Geo-location functionality 
+* Mapbox
+    * World map rendering
+* Rest Countries
+    * basic information about countries
 * Secret Santa API 
     * Processing geographical coordinates 
-* Photoshop 
-    * Creating the mockup images of the website 
+* Balsamiq
+    * Wireframes
 * Github
     * Repository hosting
 * Git 
@@ -242,6 +229,14 @@ Testing documentation can be found [here.](./TESTING.md)
     * JavaScript code validation
 
 ## Deployment
+
+### Deploy to Netlify 
+1. Navigate to [Netlify webiste](https://www.netlify.com/)
+2. Connect to Github account via Netlify
+3. Authorize Netlify and select the repository
+4. Configure settings
+5. Build application
+
 ### Version control
 The website was created in Virtual Studio Code editor, and changes were pushed to the GitHub repository by using bash terminal. 
 
