@@ -90,9 +90,11 @@ The performance is on the lower side, as is expected with how the images are ser
 
 ### HTML
 
-![HTML test]()
-
 The code passed through W3C Markup validator with no significant issues.
+
+|Page|Validator|Result|
+| --- | --- | --- |
+| Home |![home]() | <mark>PASS<mark> |
 
 ### CSS
 
