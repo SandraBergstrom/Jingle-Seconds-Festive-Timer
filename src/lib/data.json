@@ -1,7 +1,7 @@
 [
   {
     "country": "Ireland",
-    "coords": ["7.3055", "53.7798"],
+    "coords": ["-6.2603", "53.3498"],
     "activity": "To ward off evil spirits, families in Ireland make way for a healthy and prosperous New Year by banging loaves of Christmas bread against the walls and doors throughout the home"
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "country": "Spain",
-    "coords": ["3.7492", "40.4637"],
+    "coords": ["-3.7492", "40.4637"],
     "activity": "The Spanish start off their new year by eating 12 grapes, which symbolize each strike of the clock. The tradition of las doce uvas de la suerte started in the late 19th century and is believed to ward off evil while boosting your chances of a prosperous and lucky new year. However, this will work only if you manage to eat all of the grapes in a matter of seconds since they need to be gone by the time the clock finishes striking midnight."
   }
 ]

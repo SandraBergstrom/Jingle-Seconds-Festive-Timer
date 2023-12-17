@@ -21,7 +21,10 @@ map.on("style.load", () => {
   map.setFog({});
 
   countryInfo.forEach((country) => {
-    new mapboxgl.Marker({ color: "red" }).setLngLat(country.coords).addTo(map);
+    new mapboxgl.Marker({ color: "red" })
+      .setLngLat(country.coords)
+      .setPopup(new mapboxgl.Popup().setHTML(`<h3>${country.country}</h3>`))
+      .addTo(map);
   });
 });
 
@@ -62,30 +65,32 @@ map.on("mousedown", () => {
 // Restart spinning the globe when interaction is complete
 map.on("mouseup", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 
 // These events account for cases where the mouse has moved
 // off the map, so 'mouseup' will not be fired.
 map.on("dragend", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 map.on("pitchend", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 map.on("rotateend", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 
 map.on("moveend", () => {
-  spinGlobe();
+  // spinGlobe();
 });
 
 map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
+
+  console.log(lng, lat);
 
   // FUNCTION RUNS WITH BACKEND SERVER
   // fetchGeolocationTimezoneData(lat, lng);
