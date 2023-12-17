@@ -143,19 +143,27 @@
           </div>
 
           <!-- Country Name -->
-          <div class="text-center col-12 col-md-2">
-            <h3 id="selectedCountry">SwedenTEST</h3>
-            <h3 id="localCountryTime">00:20:22TEST</h3>
-            <p style="color: white">
-              SAMPLE TEXT Lorem ipsum dolor, sit amet consectetur adipisicing
-              elit. Id odit ducimus illo possimus culpa ratione facilis
-              accusamus quibusdam velit? Minima culpa delectus incidunt ipsa
-              distinctio ipsam molestias officia iste eum.
-            </p>
+          <div class="text-center col-12 col-md-4">
+            <div class="text-box">
+              <h3 id="selectedCountry">SwedenTEST</h3>
+              <p id="text-element">
+                SAMPLE TEXT Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Id odit ducimus illo possimus culpa ratione facilis.
+              </p>
+            </div>
+
+            <!-- The Modal -->
+            <div id="info-modal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="popup-content"></p>
+              </div>
+            </div>
           </div>
 
           <!-- Timer -->
-          <div class="col-12 col-md-8 d-flex justify-content-center">
+          <div class="col-12 col-md-6 d-flex justify-content-center">
             <div class="d-flex flex-column timer-container">
               <div id="days" class="fw-bold m-1 px-3">20</div>
               <div class="m-1">Days</div>
@@ -188,5 +196,6 @@
     <script type="module" src="/src/assets/js/countdown.js"></script>
     <script type="module" src="/src/assets/js/script.js"></script>
     <script type="module" src="/src/assets/js/togglePlay.js"></script>
+    <script type="module" src="/src/assets/js/modal.js"></script>
   </body>
 </html>
