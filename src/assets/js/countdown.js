@@ -10,7 +10,6 @@ const hoursElement = document.getElementById("hours");
 const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
 
-
 function setUpTimer(dstOffset) {
   const x = setInterval(function () {
     const currentTime = Date.now();
@@ -31,12 +30,12 @@ function setUpTimer(dstOffset) {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('countdown').innerHTML =
-      days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+    document.getElementById("countdown").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById('countdown').innerHTML = 'Happy New Year!';
+      document.getElementById("countdown").innerHTML = "Happy New Year!";
     }
   }, 1000);
 }
@@ -58,12 +57,12 @@ const x = setInterval(function () {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById('countdown').innerHTML =
-    days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+  document.getElementById("countdown").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById('countdown').innerHTML = 'Happy New Year!';
+    document.getElementById("countdown").innerHTML = "Happy New Year!";
   }
 }, 1000);
 
@@ -76,7 +75,7 @@ export async function getCurrentLocationLatLng() {
 
     return { lat, lng };
   } catch (error) {
-    alert('Unable to find location - default to Dublin');
+    alert("Unable to find location - default to Dublin");
     return { lat: 53.34, lng: -6.26 };
   }
 }
@@ -90,7 +89,7 @@ async function getCurrentLocation() {
         { enableHighAccuracy: true, maximumAge: 10000 }
       );
     } else {
-      reject(new Error('Geolocation is not supported by the browser.'));
+      reject(new Error("Geolocation is not supported by the browser."));
     }
   });
 }
@@ -111,35 +110,36 @@ function startTimer(id) {
 }
 
 export async function displayGeolocationData(geoCodeData, timezoneData) {
+  // ONLY WORKS WITH BACKEND
   const id = timezoneData.timeZoneId.split("/");
 
   startTimer(id);
 
   const countryCodeResult = geoCodeData?.results.find((result) =>
     result.address_components.some((component) =>
-      component.types.includes('country')
+      component.types.includes("country")
     )
   );
 
   const countryCode = countryCodeResult?.address_components.find((component) =>
-    component.types.includes('country')
+    component.types.includes("country")
   )?.short_name;
 
   const countryResult = geoCodeData?.results.find((result) =>
     result.address_components.some((component) =>
-      component.types.includes('country')
+      component.types.includes("country")
     )
   );
 
   const country = countryResult?.address_components.find((component) =>
-    component.types.includes('country')
+    component.types.includes("country")
   )?.long_name;
 
   // DUMMY DATA
-  const dummyCountryCode = 'AU';
+  const dummyCountryCode = "AU";
 
   const countryInfoResponse = await fetch(
-    `https://restcountries.com/v3.1/alpha/${dummyCountryCode}`
+    `https://restcountries.com/v3.1/alpha/${countryCode}`
   );
   const countryInfo = await countryInfoResponse.json();
 
@@ -177,13 +177,17 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
 }
 
 export async function fetchGeolocationTimezoneData(lat, lng) {
-  const response = await fetch('http://localhost:3000/api/timezone', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ lat, lng }),
-  });
+  console.log("FETCHING API - PLEASE USE CARFEULLY");
+  const response = await fetch(
+    "https://googlefetchapi-4209c876662c.herokuapp.com/api/timezone",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ lat, lng }),
+    }
+  );
 
   const { data } = await response.json();
 

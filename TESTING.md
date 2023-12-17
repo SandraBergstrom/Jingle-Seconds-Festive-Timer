@@ -44,6 +44,10 @@ Lighthouse was used throughout the development process to monitor application pe
 
 The code passed through W3C Markup validator with no significant issues.
 
+|Page|Validator|Result|
+| --- | --- | --- |
+| Home |![home]() | <mark>PASS<mark> |
+
 ### CSS
 
 CSS file, included with this project, passed through Jigsaw validator with no significant issues.
