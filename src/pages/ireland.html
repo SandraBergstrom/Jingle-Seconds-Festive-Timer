@@ -1,193 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festive Timer</title>
     <!-- BOOTSTRAP 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="/src/assets/css/styles.css" />
 
     <!-- Favicons -->
-    <link type="image/png" sizes="16x16" rel="icon" href="../assets/images/favicons/icons8-fireworks-emoji-16.png">
-    <link type="image/png" sizes="32x32" rel="icon" href="../assets/images/favicons/icons8-fireworks-emoji-32.png">
-    <link type="image/png" sizes="96x96" rel="icon" href="../assets/images/favicons/icons8-fireworks-emoji-96.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="76x76"
-        href="../assets/images/favicons/icons8-fireworks-emoji-76.png">
-</head>
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="76x76"
+      href="../assets/images/favicons/icons8-fireworks-emoji-76.png"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- Nav -->
-        <nav class="navbar navbar-expand-lg navbar-dark header-nav">
-            <div class="container">
-                <a href="index.html" class="navbar-brand"><strong>Festive</strong>Timer</a>
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-lg navbar-dark header-nav">
+        <div class="container">
+          <a href="index.html" class="navbar-brand"
+            ><strong>Festive</strong>Timer</a
+          >
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Countries
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="greece.html">Greece</a></li>
-                                <li><a class="dropdown-item" href="india.html">India</a></li>
-                                <li><a class="dropdown-item" href="ireland.html">Ireland</a></li>
-                                <li><a class="dropdown-item" href="japan.html">Japan</a></li>
-                                <li><a class="dropdown-item" href="poland.html">Poland</a></li>
-                                <li><a class="dropdown-item" href="spain.html">Spain</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="team.html">Team</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Countries
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="greece.html">Greece</a>
+                  </li>
+                  <li><a class="dropdown-item" href="india.html">India</a></li>
+                  <li>
+                    <a class="dropdown-item" href="ireland.html">Ireland</a>
+                  </li>
+                  <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                  <li>
+                    <a class="dropdown-item" href="poland.html">Poland</a>
+                  </li>
+                  <li><a class="dropdown-item" href="spain.html">Spain</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="hero-section">
-            <div id="timer-image" class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-8 d-flex justify-content-center align-items-center " style=" height: 500px;">
-
-                        <div class="col-10 d-flex justify-content-center">
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="days" class="fw-bold text-center">00</div>
-                                <div class="text-center">Days</div>
-                            </div>
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="hours" class="fw-bold text-center">00</div>
-                                <div class="text-center">Hours</div>
-                            </div>
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="minutes" class="fw-bold text-center">00</div>
-                                <div class="text-center">Min</div>
-                            </div>
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="seconds" class="fw-bold text-center">00</div>
-                                <div class="text-center">Sec</div>
-                            </div>
-                        </div>
-                    </div>
+      <section class="hero-section">
+        <div id="timer-image" class="container-fluid">
+          <div class="row justify-content-center">
+            <div
+              class="col-8 d-flex justify-content-center align-items-center"
+              style="height: 500px"
+            >
+              <div class="col-10 d-flex justify-content-center">
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="days" class="fw-bold text-center">00</div>
+                  <div class="text-center">Days</div>
                 </div>
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="hours" class="fw-bold text-center">00</div>
+                  <div class="text-center">Hours</div>
+                </div>
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="minutes" class="fw-bold text-center">00</div>
+                  <div class="text-center">Min</div>
+                </div>
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="seconds" class="fw-bold text-center">00</div>
+                  <div class="text-center">Sec</div>
+                </div>
+              </div>
             </div>
-        </section>
-        <section class="main-content">
-            <h2 class="text-center mt-3 fw-bold my-3">Let's Celebrate With Ireland!</h2>
-            <div class="container mb-5">
-                <div class="row  mt-4 justify-content-center">
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img class="img-fluid fact-image" src="../assets/images/bread.webp" alt="Image of bread">
-
-                    </div>
-                    <div class=" col-12 col-md-8 mt-3 mt-md-0">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-lightbulb fa-fade fa-2xl me-4" style="color: #fbb85b;"></i>
-                            <p class="fw-bolder fs-3">Did you know?</p>
-                        </div>
-
-                        <p>To ward off evil spirits, families in Ireland make way for a healthy and prosperous New Year
-                            by banging loaves of Christmas bread against the walls and doors throughout the home.
-
-                        </p>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-content">
+        <h2 class="text-center mt-3 fw-bold my-3">
+          Let's Celebrate With Ireland!
+        </h2>
+        <div class="container mb-5">
+          <div class="row mt-4 justify-content-center">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+              <img
+                class="img-fluid fact-image"
+                src="../assets/images/bread.webp"
+                alt="Image of bread"
+              />
             </div>
-            <hr>
-            <div class="container">
-                <div class="row my-5 fact-container">
-                    <h2 class="text-center mb-5">3 Best Places in Ireland for New Year’s Eve</h2>
-                    <div class="col-12 col-md-6 left-anim">
-                        <p class="fw-bold">1. Dublin</p>
-                        <p>On New Year’s Day, the capital city of Ireland becomes one huge venue for new year
-                            celebrations and merriment. There’s something for everyone in the annual New Year’s Festival
-                            Dublin and it is open to people of all ages.
-                            <br>
-                            Meeting House Square in Temple Bar, Dublin’s cultural epicenter, is hosting a party with
-                            live music this afternoon. Here, you can treat your senses to the spectacle of interactive
-                            art installations, or groove to live music and street performances. You may also affix your
-                            New Year’s resolutions to the designated Resolution Tree.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-6 d-flex justify-content-center right-anim">
-                        <img class="img-fluid location-image" src="../assets/images/new-years-madrid.webp" alt="Dublin">
-                    </div>
-                </div>
+            <div class="col-12 col-md-8 mt-3 mt-md-0">
+              <div class="d-flex">
+                <i
+                  class="fa-solid fa-lightbulb fa-fade fa-2xl me-4"
+                  style="color: #fbb85b"
+                ></i>
+                <p class="fw-bolder fs-3">Did you know?</p>
+              </div>
 
-                <div class="row my-5 fact-container2">
-                    <div class="col-12 col-md-6 order-1 order-md-2 right-anim">
-                        <p class="fw-bold">2. Pub Crawl In Galway City, Co Galway</p>
-                        <p>Every weekend of the year is a good time to visit Galway, but it’s an especially fun time to
-                            visit during the New Year’s Eve party. This old city in the west knows how to throw a good
-                            party, so you have a lot to look forward to in the coming New Year.
-                            <br>
-                            Everywhere you go, you’ll hear live music and see a diverse population of partygoers from
-                            all over Ireland and the world. All these things contribute to that special party vibe that
-                            makes Galway so well-known for celebrations. And if you’re here to celebrate the coming
-                            year, don’t settle in one place. Explore the many cool venues and party your way around
-                            Galway’s with a new year’s eve pub crawl.
-                        </p>
-                    </div>
-
-                    <div class="col-12 col-md-6 order-2 order-md-1 left-anim">
-                        <img class="img-fluid location-image" src="../assets/images/galway.webp" alt="Galway">
-                    </div>
-                </div>
-
-                <div class="row my-5 fact-container">
-                    <div class="col-12 col-md-6 left-anim">
-                        <p class="fw-bold">3. Watch the fireworks in Dingle, Co Kerry</p>
-                        <p>Dingle’s New Year’s Eve celebrations are legendary and for good reason. They feature a heady
-                            cocktail of authentic Irish merriment, grand spectacles like fireworks and parades, and a
-                            wild party vibe.
-                            <br>
-                            Indeed, Dingle is a town that knows how to have a good time, as seen by the abundance of
-                            bars playing traditional Irish music that line its streets. On the eve of the New Year,
-                            however, thousands of people flock to the streets of the town center to ring in the new year
-                            in typical Kerry fashion.
-                        </p>
-                    </div>
-
-                    <div class="col-12 col-md-6 right-anim">
-                        <img class="img-fluid location-image" src="../assets/images/dingle.webp" alt="Dingle, Kerry">
-                    </div>
-                </div>
+              <p>
+                To ward off evil spirits, families in Ireland make way for a
+                healthy and prosperous New Year by banging loaves of Christmas
+                bread against the walls and doors throughout the home.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+        <hr />
+        <div class="container">
+          <div class="row my-5 fact-container">
+            <h2 class="text-center mb-5">
+              3 Best Places in Ireland for New Year’s Eve
+            </h2>
+            <div class="col-12 col-md-6 left-anim">
+              <p class="fw-bold">1. Dublin</p>
+              <p>
+                On New Year’s Day, the capital city of Ireland becomes one huge
+                venue for new year celebrations and merriment. There’s something
+                for everyone in the annual New Year’s Festival Dublin and it is
+                open to people of all ages.
+                <br />
+                Meeting House Square in Temple Bar, Dublin’s cultural epicenter,
+                is hosting a party with live music this afternoon. Here, you can
+                treat your senses to the spectacle of interactive art
+                installations, or groove to live music and street performances.
+                You may also affix your New Year’s resolutions to the designated
+                Resolution Tree.
+              </p>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center right-anim"
+            >
+              <img
+                class="img-fluid location-image"
+                src="../assets/images/new-years-madrid.webp"
+                alt="Dublin"
+              />
+            </div>
+          </div>
 
+          <div class="row my-5 fact-container2">
+            <div class="col-12 col-md-6 order-1 order-md-2 right-anim">
+              <p class="fw-bold">2. Pub Crawl In Galway City, Co Galway</p>
+              <p>
+                Every weekend of the year is a good time to visit Galway, but
+                it’s an especially fun time to visit during the New Year’s Eve
+                party. This old city in the west knows how to throw a good
+                party, so you have a lot to look forward to in the coming New
+                Year.
+                <br />
+                Everywhere you go, you’ll hear live music and see a diverse
+                population of partygoers from all over Ireland and the world.
+                All these things contribute to that special party vibe that
+                makes Galway so well-known for celebrations. And if you’re here
+                to celebrate the coming year, don’t settle in one place. Explore
+                the many cool venues and party your way around Galway’s with a
+                new year’s eve pub crawl.
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6 order-2 order-md-1 left-anim">
+              <img
+                class="img-fluid location-image"
+                src="../assets/images/galway.webp"
+                alt="Galway"
+              />
+            </div>
+          </div>
+
+          <div class="row my-5 fact-container">
+            <div class="col-12 col-md-6 left-anim">
+              <p class="fw-bold">3. Watch the fireworks in Dingle, Co Kerry</p>
+              <p>
+                Dingle’s New Year’s Eve celebrations are legendary and for good
+                reason. They feature a heady cocktail of authentic Irish
+                merriment, grand spectacles like fireworks and parades, and a
+                wild party vibe.
+                <br />
+                Indeed, Dingle is a town that knows how to have a good time, as
+                seen by the abundance of bars playing traditional Irish music
+                that line its streets. On the eve of the New Year, however,
+                thousands of people flock to the streets of the town center to
+                ring in the new year in typical Kerry fashion.
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6 right-anim">
+              <img
+                class="img-fluid location-image"
+                src="../assets/images/dingle.webp"
+                alt="Dingle, Kerry"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <section style="height: 400px;"></section>
+    <section style="height: 400px"></section>
 
     <!-- BOOTSTRAP SCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="/src/assets/js/animation.js"></script>
     <!-- <script type="module" src="/src/assets/js/countdown.js"></script> -->
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/f6549ef1f7.js" crossorigin="anonymous"></script>
-    <script type="module" src="../../src/assets/js/counterIreland.js"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/f6549ef1f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../../src/assets/js/countryCounter.js"></script>
+  </body>
 </html>
