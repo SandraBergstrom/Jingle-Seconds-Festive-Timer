@@ -111,9 +111,9 @@ function startTimer(id) {
 
 export async function displayGeolocationData(geoCodeData, timezoneData) {
   // ONLY WORKS WITH BACKEND
-  // const id = timezoneData.timeZoneId.split("/");
+  const id = timezoneData.timeZoneId.split("/");
 
-  // startTimer(id);
+  startTimer(id);
 
   const countryCodeResult = geoCodeData?.results.find((result) =>
     result.address_components.some((component) =>
@@ -139,33 +139,33 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
   const dummyCountryCode = "AU";
 
   const countryInfoResponse = await fetch(
-    `https://restcountries.com/v3.1/alpha/${dummyCountryCode}`
+    `https://restcountries.com/v3.1/alpha/${countryCode}`
   );
   const countryInfo = await countryInfoResponse.json();
 
   // TIMEZONE DISABLED DURING TESTING
 
-  // const { dstOffset, rawOffset } = timezoneData;
+  const { dstOffset, rawOffset } = timezoneData;
 
-  // const currentTime = Date.now();
-  // const totalOffsetMilliseconds = dstOffset
-  //   ? dstOffset * 1000
-  //   : rawOffset * 1000;
-  // const countryTime = new Date(currentTime + totalOffsetMilliseconds);
+  const currentTime = Date.now();
+  const totalOffsetMilliseconds = dstOffset
+    ? dstOffset * 1000
+    : rawOffset * 1000;
+  const countryTime = new Date(currentTime + totalOffsetMilliseconds);
 
-  // localCountryTimeElement.innerHTML;
+  localCountryTimeElement.innerHTML;
 
-  // const distance = newYearDate - countryTime;
+  const distance = newYearDate - countryTime;
 
-  // const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  // const hours = Math.floor(
-  //   (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  // );
-  // const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // localCountryTimeElement.innerHTML =
-  //   days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  localCountryTimeElement.innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
   const flagSrc = countryInfo[0]?.flags?.svg;
 
@@ -177,6 +177,7 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
 }
 
 export async function fetchGeolocationTimezoneData(lat, lng) {
+  console.log("FETCHING API - PLEASE USE CARFEULLY");
   const response = await fetch(
     "https://googlefetchapi-4209c876662c.herokuapp.com/api/timezone",
     {

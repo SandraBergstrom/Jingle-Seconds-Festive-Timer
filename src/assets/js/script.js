@@ -4,6 +4,7 @@ import {
   fetchGeolocationTimezoneData,
   displayGeolocationData,
 } from "./countdown";
+import countryInfo from "../../lib/data.json";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmFybmVzbG93IiwiYSI6ImNsMGUyeHV6MDBmMGYzanBybDIyZ3BvOTQifQ.orwWz3XDibvdJSe_tfAxEA";
@@ -11,13 +12,20 @@ mapboxgl.accessToken =
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/satellite-v9",
-  projection: "globe", // Display the map as a globe, since satellite-v9 defaults to Mercator
+  projection: "globe",
   zoom: 1,
   center: [-90, 40],
 });
 
 map.on("style.load", () => {
-  map.setFog({}); // Set the default atmosphere style
+  map.setFog({});
+
+  countryInfo.forEach((country) => {
+    new mapboxgl.Marker({ color: "red" })
+      .setLngLat(country.coords)
+      .setPopup(new mapboxgl.Popup().setHTML(`<h3>${country.country}</h3>`))
+      .addTo(map);
+  });
 });
 
 // The following values can be changed to control rotation speed:
@@ -57,34 +65,36 @@ map.on("mousedown", () => {
 // Restart spinning the globe when interaction is complete
 map.on("mouseup", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 
 // These events account for cases where the mouse has moved
 // off the map, so 'mouseup' will not be fired.
 map.on("dragend", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 map.on("pitchend", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 map.on("rotateend", () => {
   userInteracting = false;
-  spinGlobe();
+  // spinGlobe();
 });
 
 map.on("moveend", () => {
-  spinGlobe();
+  // spinGlobe();
 });
 
 map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
 
+  console.log(lng, lat);
+
   // FUNCTION RUNS WITH BACKEND SERVER
-  fetchGeolocationTimezoneData(lat, lng);
-  // displayGeolocationData();
+  // fetchGeolocationTimezoneData(lat, lng);
+  displayGeolocationData();
 
   map.flyTo({
     center: [lng, lat],
@@ -106,7 +116,7 @@ map.on("click", (e) => {
 
 // Removed the e.target.innerHTML to prevent the button from changing text
 // when clicked. In html there is now icons instead and a seperate function
-// to toggle the icons. 
+// to toggle the icons.
 document.getElementById("btn-spin").addEventListener("click", () => {
   spinEnabled = !spinEnabled;
   if (spinEnabled) {
@@ -116,15 +126,15 @@ document.getElementById("btn-spin").addEventListener("click", () => {
   }
 });
 
-spinGlobe();
+// spinGlobe();
 
 // Zooms to user position
-async function zoomToLatLng() {
-  const { lat, lng } = await getCurrentLocationLatLng();
-  map.flyTo({
-    center: [lng, lat],
-    zoom: 4,
-    essential: true,
-  });
-}
-zoomToLatLng();
+// async function zoomToLatLng() {
+//   const { lat, lng } = await getCurrentLocationLatLng();
+//   map.flyTo({
+//     center: [lng, lat],
+//     zoom: 4,
+//     essential: true,
+//   });
+// }
+// zoomToLatLng();
