@@ -106,7 +106,7 @@ map.on("click", (e) => {
 
 // Removed the e.target.innerHTML to prevent the button from changing text
 // when clicked. In html there is now icons instead and a seperate function
-// to toggle the icons. 
+// to toggle the icons.
 document.getElementById("btn-spin").addEventListener("click", () => {
   spinEnabled = !spinEnabled;
   if (spinEnabled) {
