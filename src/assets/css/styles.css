@@ -25,7 +25,6 @@ body {
   flex-direction: column;
   background: var(--dark-blue);
   overflow-x: hidden;
-  /* font-family: 'Playfair', 'Times New Roman', Times, serif; */
 }
 
 h1 {

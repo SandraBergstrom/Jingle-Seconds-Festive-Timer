@@ -9,18 +9,18 @@ if (originalText.length > maxLength) {
   var trimmedText = originalText.substr(0, maxLength) + ' ...click me!';
   textElement.textContent = trimmedText;
 
-  textElement.addEventListener('click', function() {
+  textElement.addEventListener('click', function () {
     popupContent.textContent = originalText;
-    modal.style.display = 'block'; 
+    modal.style.display = 'block';
   });
 
-  close.onclick = function() {
-    modal.style.display = 'none'; 
-  }
+  close.onclick = function () {
+    modal.style.display = 'none';
+  };
 
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = 'none'; 
+      modal.style.display = 'none';
     }
-  }
+  };
 }
