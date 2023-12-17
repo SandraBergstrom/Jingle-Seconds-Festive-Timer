@@ -258,6 +258,15 @@ p {
   object-fit: cover;
 }
 
+.footer {
+  background-color: #121931;
+}
+
+.footer-links {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
