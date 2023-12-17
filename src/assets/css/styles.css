@@ -40,7 +40,7 @@ h2 {
 
 #selectedCountry,
 #localCountryTime {
-  font-size: calc(1rem + .4vw);
+  font-size: calc(1rem + 0.4vw);
   color: var(--accent-champagne);
 }
 
@@ -101,7 +101,11 @@ p {
   display: inline-block;
   font-family: var(--font-family);
   color: var(--accent-champagne);
-  background: linear-gradient(to right, var(--dark-blue) 0%, var(--lighter-blue) 100%);
+  background: linear-gradient(
+    to right,
+    var(--dark-blue) 0%,
+    var(--lighter-blue) 100%
+  );
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
@@ -110,7 +114,11 @@ p {
 }
 
 #btn-spin:hover {
-  background: linear-gradient(to right, var(--off-white) 0%, var(--accent-champagne) 100%);
+  background: linear-gradient(
+    to right,
+    var(--off-white) 0%,
+    var(--accent-champagne) 100%
+  );
   color: var(--dark-blue);
 }
 
@@ -185,12 +193,12 @@ p {
 
 /* The Modal (background) */
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   margin: auto;
-  overflow: auto; 
+  overflow: auto;
 }
 
 /* Modal Content */
@@ -209,11 +217,10 @@ p {
   font-size: 28px;
   font-weight: bold;
 }
-.text-box
-.close:hover,
+.text-box .close:hover,
 .close:focus {
   color: var(--accent-champagne);
-  padding: 20px
+  padding: 20px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -229,6 +236,26 @@ p {
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
+}
+
+/* Team Page */
+.card {
+  min-height: 360px;
+  /* From https://css.glass */
+  background: rgba(227, 232, 237, 0.905);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(214, 213, 213, 1);
+  border-radius: 5px;
+  box-shadow: 6px 4px 17px 0px #e5e3e3;
+}
+
+.team-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
 }
 
 /* Media Queries */
@@ -271,7 +298,7 @@ p {
 
   #selectedCountry,
   #localCountryTime {
-    font-size: calc(1rem + .4vw);
+    font-size: calc(1rem + 0.4vw);
     color: var(--accent-champagne);
   }
 
@@ -281,6 +308,6 @@ p {
   }
 
   .modal {
-    display: none; 
-  } 
+    display: none;
+  }
 }
