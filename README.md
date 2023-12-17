@@ -1,4 +1,8 @@
+style
+# December Hackathon
+![Banner](/team-8/src/assets/images/docs/banner-s.webp)
 # Festive Timer
+ main
 
 [Hero Image]()
 
