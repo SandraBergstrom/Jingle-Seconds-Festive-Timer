@@ -1,6 +1,8 @@
 # Festive Timer
 
-![Hero Image](../Jingle-Seconds-Festive-Timer/readme/images/hero.png)
+Link to deployed project [here](https://festive-timer.netlify.app/)
+
+![Hero Image](./readme/images/hero.png)
 
 Festive Timer is a user-friendly application designed for its users to access the New Year countdown timer appropriate for selected time zones and exciting pieces of trivia about pre-selected countries and places worth visiting.
 
@@ -192,6 +194,8 @@ Implementation:
 Dark blue (#031023), light blue (#153c75), white(#f1f1f1) and light-brown (#f7e7ce) were chosen as primary colours for application.
 The main font of the application is Roboto font.
 
+![](./readme/images/colors.PNG)
+
 ## Testing
 Testing documentation can be found [here.](./TESTING.md)
 
@@ -282,17 +286,43 @@ The following commands were used:
 
 ## Credits
 JingleSeconds team members
-* Dayana Nashkova
-* Oluwaseun Olawunmi Adeoye
-* Sandra Bergstrom
-* Darrach Barneveld
-* Dima Bulavenko
-* Bartosz Gębarowski
+* [Dayana Nashkova](https://github.com/Dayana-N)
+* [Oluwaseun Olawunmi Adeoye](https://github.com/57Esther)
+* [Sandra Bergstrom](https://github.com/SandraBergstrom)
+* [Darrach Barneveld](https://github.com/DarrachBarneveld)
+* [Dima Bulavenko](https://github.com/Dima-Bulavenko)
+* [Bartosz Gębarowski](https://github.com/bartoszgebarowski)
 
 
 ### Media
 
 Festive Timer application was created for educational purposes only. Their rightful owners own all content, like images, text or any other, used by authors to create this application.
+
+- [Manali](https://wanderon.in/_next/image?url=https%3A%2F%2Fdr7f10k1l6bnm.cloudfront.net%2Fwp-content%2Fuploads%2F2022%2F11%2Fmanali-4.jpg&w=1920&q=75)
+- [New Year in Goa](https://www.goatripsindia.com/images/2016/04/New-Year-Celebrations-in-Goa.jpg)
+- [Kashmir Warmth bornfire](https://www.kashmirhills.com/wp-content/uploads/2015/12/Kashmir-Warmth-bornfire.jpg)
+- [Effigy on fire](https://www.india.com/wp-content/uploads/2018/08/28travel-Burning-Man.jpg)
+- [Dublin](https://c.tadst.com/gfx/750w/fireworks-over-building-river-people-on-bridge.jpg)
+- [Dingle, Kerry](https://images.ireland.com/media/Images/Kerry/e5a32f6deb944b1dbf247d747bd744ad.jpg)
+- [Galway](https://wonder.co.uk/wp-content/uploads/2020/05/declan_colohan_2020-ballinasloe-25-5.jpg)
+- [Bread Image](https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20200106142455/bread.jpg)
+- [Japan traditional noodles](https://media.glamour.com/photos/5fc53ee8cea2c24a2fe463d5/master/w_1600,c_limit/957725340)
+- [Shibuya Crossing](https://media.timeout.com/images/105692512/750/422/image.jpg)
+- [Tokyo Tower](https://flipjapanguide.com/wp-content/uploads/2022/12/New-Years-Eve-events-in-Tokyo-Featured-Image.jpg)
+- [Zojoji Temple](https://live.staticflickr.com/149/342200475_2a24e8bdc0_b.jpg)
+- [Celebration](https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_768,h_512/https://travelpolandtours.com/wp-content/uploads/2023/02/2-1024x683.png)
+- [Krakow](https://cdn-imgix.headout.com/media/images/87fe368c2922c1b4e91ec1477652c9ef-krakow%2015.jpg?auto=format&w=814.9333333333333&h=458.4&q=90&ar=16%3A9&crop=faces)
+- [Zakopane](https://zakopane.com/wp-content/uploads/2020/12/Zakopane-Nowy-Rok-2-scaled.jpeg)
+- [Warsaw](https://i.pinimg.com/originals/17/12/ea/1712ea64722814ad872dd4f23dce51bd.jpg)
+- [Spain tradition grapes](https://www.spain.info/export/sites/segtur/.content/imagenes/reportajes/genericas/doce-uvas-reloj-nochevieja-s529882711.jpg)
+- [Barcelona](https://utopia-villas.com/wp-content/uploads/2019/12/Depositphotos_91258984_xl-2015-2-800x460.jpg)
+- [Nochevieja Universitaria in Salamanca](https://3.bp.blogspot.com/-oK8wNAY_zUc/VIB2BBKk5TI/AAAAAAAAAHA/cyeY-KATmws/s1600/131212_salamanca_NUplaza2_0026.jpg)
+- [Madrid’s Puerta del Sol Celebration](https://loveatfirstadventure.com/wp-content/uploads/2023/09/new-years-madrid.webp)
+- [Onions](https://i0.wp.com/english.lematinal.media/wp-content/uploads/2023/01/During-the-New-Year-People-in-Greece-hang-bunch-of-onions-outside-their-doors.jpg?resize=696%2C522&ssl=1)
+- [Thessaloniki](https://www.greece-is.com/wp-content/uploads/2017/12/Thessaloniki_fireworks_shutterstock_768322444.jpg)
+- [Corfu](https://www.corfusecret.gr/blog/files/2022-12/1671628525_christmas-in-corfu2.jpg)
+- [Athens](https://fusetravels.com/wp-content/uploads/2023/10/4-1.jpg)
+
 
 ### Honourable mentions
 
