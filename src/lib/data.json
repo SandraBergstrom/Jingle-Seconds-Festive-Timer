@@ -1,0 +1,32 @@
+[
+  {
+    "country": "Ireland",
+    "coords": ["7.3055", "53.7798"],
+    "activity": "To ward off evil spirits, families in Ireland make way for a healthy and prosperous New Year by banging loaves of Christmas bread against the walls and doors throughout the home"
+  },
+  {
+    "country": "Greece",
+    "coords": ["21.8243", "39.0742"],
+    "activity": "Not only are onions a kitchen staple, they can also bring you good luck for the year ahead. In Greece it’s tradition to hang an onion outside your door. Believed to symbolize fertility and growth (thanks to its ability to sprout on its own), the onion is hung on the door after church service on New Year’s Day."
+  },
+  {
+    "country": "India",
+    "coords": ["78.9629", "20.5937"],
+    "activity": "In Bombay, now known as Mumbai, a tradition thrived where communities would construct an effigy representing the 'old man' symbolizing the passing year. At midnight, this effigy was set ablaze, signifying the departure of past grievances and the welcoming of a new year. The significance extended beyond mere symbolism; it fostered a communal celebration uniting people across diverse backgrounds. Bombay's cosmopolitan nature, home to individuals of varied faiths, allowed for a rich tapestry of festivals. However, the tradition of burning the 'old man' stood out as an inclusive ceremony that transcended age and religious beliefs."
+  },
+  {
+    "country": "Japan",
+    "coords": ["138.2529", "36.2048"],
+    "activity": "Here's a New Year's Eve appetizer idea: People in Japan kick off the New Year by eating a warm bowl of soba noodles. The tradition dates back to the Kamakura period and is tied to a Buddhist temple giving out the noodles to the poor. Because the long thin noodles are firm yet easy to bite, it is believed eating them symbolizes a literal break away from the old year."
+  },
+  {
+    "country": "Poland",
+    "coords": ["19.1451", "51.9194"],
+    "activity": "The tradition of celebrating New Year's Eve and welcoming the New Year in Poland is only short. Until the second half of the 19th century, there were no lavish New Year's Eve balls, dances or even New Year's toasts. The New Year was welcome in big cities and wealthy homes. In the countryside, the last day of the year had no important significance - the important celebration was Christmas."
+  },
+  {
+    "country": "Spain",
+    "coords": ["3.7492", "40.4637"],
+    "activity": "The Spanish start off their new year by eating 12 grapes, which symbolize each strike of the clock. The tradition of las doce uvas de la suerte started in the late 19th century and is believed to ward off evil while boosting your chances of a prosperous and lucky new year. However, this will work only if you manage to eat all of the grapes in a matter of seconds since they need to be gone by the time the clock finishes striking midnight."
+  }
+]
