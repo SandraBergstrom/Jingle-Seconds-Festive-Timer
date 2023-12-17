@@ -41,7 +41,7 @@ h2 {
 #selectedCountry,
 #localCountryTime {
   font-size: calc(1rem + .4vw);
-  color: var(--accent-champagne);
+  color: var(--dark-blue);
 }
 
 p {
@@ -96,7 +96,8 @@ p {
 
 #btn-spin {
   position: relative;
-  margin-top: -65px;
+  top: -55px;
+  left: 10px;
   display: inline-block;
   font-family: var(--font-family);
   color: var(--accent-champagne);
@@ -187,10 +188,11 @@ p {
   .navbar-brand {
     font-size: 32px;
   }
-  
+
   .nav-item .nav-link {
     font-size: 18px;
   }
+
   #map {
     height: 90vh;
   }
@@ -202,13 +204,13 @@ p {
   #country-counter-container {
     flex-wrap: nowrap;
     flex-direction: row;
-    position: absolute; 
+    position: absolute;
     margin: 0;
-    bottom: 35px; 
-    left: 0; 
-    right: 0; 
+    bottom: 35px;
+    left: 0;
+    right: 0;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
   }
 
   #flag {
@@ -216,6 +218,12 @@ p {
     width: 100%;
     height: auto;
     margin-left: 25px;
+  }
+
+  #selectedCountry,
+  #localCountryTime {
+    font-size: calc(1rem + .4vw);
+    color: var(--accent-champagne);
   }
 
   #btn-spin {
