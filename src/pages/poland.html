@@ -1,213 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festive Timer - Poland</title>
     <!-- BOOTSTRAP 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="/src/assets/css/styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- Nav -->
-        <nav class="navbar navbar-expand-lg navbar-dark header-nav">
-            <div class="container">
-                <a href="index.html" class="navbar-brand"><strong>Festive</strong>Timer</a>
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-lg navbar-dark header-nav">
+        <div class="container">
+          <a href="index.html" class="navbar-brand"
+            ><strong>Festive</strong>Timer</a
+          >
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Countries
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="greece.html">Greece</a></li>
-                                <li><a class="dropdown-item" href="india.html">India</a></li>
-                                <li><a class="dropdown-item" href="ireland.html">Ireland</a></li>
-                                <li><a class="dropdown-item" href="japan.html">Japan</a></li>
-                                <li><a class="dropdown-item" href="poland.html">Poland</a></li>
-                                <li><a class="dropdown-item" href="spain.html">Spain</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="team.html">Team</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Countries
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="greece.html">Greece</a>
+                  </li>
+                  <li><a class="dropdown-item" href="india.html">India</a></li>
+                  <li>
+                    <a class="dropdown-item" href="ireland.html">Ireland</a>
+                  </li>
+                  <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                  <li>
+                    <a class="dropdown-item" href="poland.html">Poland</a>
+                  </li>
+                  <li><a class="dropdown-item" href="spain.html">Spain</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <section class="hero-section">
-            <div id="timer-image" class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-8 d-flex justify-content-center align-items-center " style=" height: 500px;">
-
-                        <div class="col-10 d-flex justify-content-center">
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="days" class="fw-bold text-center">00</div>
-                                <div class="text-center">Days</div>
-                            </div>
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="hours" class="fw-bold text-center">00</div>
-                                <div class="text-center">Hours</div>
-                            </div>
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="minutes" class="fw-bold text-center">00</div>
-                                <div class="text-center">Min</div>
-                            </div>
-                            <div class="px-3 mx-2 d-flex flex-column timer-container">
-                                <div id="seconds" class="fw-bold text-center">00</div>
-                                <div class="text-center">Sec</div>
-                            </div>
-                        </div>
-                    </div>
+      <section class="hero-section">
+        <div id="timer-image" class="container-fluid">
+          <div class="row justify-content-center">
+            <div
+              class="col-8 d-flex justify-content-center align-items-center"
+              style="height: 500px"
+            >
+              <div class="col-10 d-flex justify-content-center">
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="days" class="fw-bold text-center">00</div>
+                  <div class="text-center">Days</div>
                 </div>
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="hours" class="fw-bold text-center">00</div>
+                  <div class="text-center">Hours</div>
+                </div>
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="minutes" class="fw-bold text-center">00</div>
+                  <div class="text-center">Min</div>
+                </div>
+                <div class="px-3 mx-2 d-flex flex-column timer-container">
+                  <div id="seconds" class="fw-bold text-center">00</div>
+                  <div class="text-center">Sec</div>
+                </div>
+              </div>
             </div>
-        </section>
-        <section class="main-content">
-            <h2 class="text-center mt-3 fw-bold my-3">Let's Celebrate With Poland!</h2>
-            <div class="container">
-                <div class="row  mt-4 justify-content-center">
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img class="img-fluid fact-image" src="../assets/images/poland.webp"
-                            alt="Image of grapes next to clock">
-                    </div>
-                    <div class="col-12 col-md-8 mt-3 mt-md-0">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-lightbulb fa-fade fa-2xl me-4" style="color: #fbb85b;"></i>
-                            <p class="fw-bolder fs-3">Did you know?</p>
-                        </div>
-                        <p>The tradition of celebrating New Year's Eve and welcoming the New Year in Poland is only
-                            short.
-                            Until the second half of the 19th century, there were no lavish New Year's Eve balls, dances
-                            or even New Year's toasts.
-                            The New Year was welcome in big cities and wealthy homes. In the countryside, the last day
-                            of the year
-                            had no important significance - the important celebration was Christmas.
-                        </p>
-                        <p>
-                            In the past, New Year was celebrated mainly in cities.
-                            In Warsaw - with a cannon salute, in Krakow - with the ringing of the Sigismund bell on
-                            Wawel.
-                        </p>
-                        <p>
-                            Depending on the region of Poland, there were large lunches or New Year's Eve dinners where
-                            the whole family and friends met.
-                            You could find generously seasoned peas with cabbage or sausage among those mentioned.
-                            Bread and homemade cake were significant symbols.
-                        </p>
-                        <p>
-                            In the 20th century, huge, lavish New Year's Eve balls were organized.
-                            They took place from a public office, regarding meetings or restaurants.
-                            Regular house parties were popular during the Polish People's Republic.
-                        </p>
-                        <p>
-                            New Year's traditions included those characteristics of the winter solstice related to magic
-                            and fortune-telling.
-                            It can be used for hiding, cleaning the house, and looking out for a man as the first member
-                            of the household.
-                        </p>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-content">
+        <h2 class="text-center mt-3 fw-bold my-3">
+          Let's Celebrate With Poland!
+        </h2>
+        <div class="container">
+          <div class="row mt-4 justify-content-center">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+              <img
+                class="img-fluid fact-image"
+                src="../assets/images/poland.webp"
+                alt="Image of grapes next to clock"
+              />
+            </div>
+            <div class="col-12 col-md-8 mt-3 mt-md-0">
+              <div class="d-flex">
+                <i
+                  class="fa-solid fa-lightbulb fa-fade fa-2xl me-4"
+                  style="color: #fbb85b"
+                ></i>
+                <p class="fw-bolder fs-3">Did you know?</p>
+              </div>
+              <p>
+                The tradition of celebrating New Year's Eve and welcoming the
+                New Year in Poland is only short. Until the second half of the
+                19th century, there were no lavish New Year's Eve balls, dances
+                or even New Year's toasts. The New Year was welcome in big
+                cities and wealthy homes. In the countryside, the last day of
+                the year had no important significance - the important
+                celebration was Christmas.
+              </p>
+              <p>
+                In the past, New Year was celebrated mainly in cities. In Warsaw
+                - with a cannon salute, in Krakow - with the ringing of the
+                Sigismund bell on Wawel.
+              </p>
+              <p>
+                Depending on the region of Poland, there were large lunches or
+                New Year's Eve dinners where the whole family and friends met.
+                You could find generously seasoned peas with cabbage or sausage
+                among those mentioned. Bread and homemade cake were significant
+                symbols.
+              </p>
+              <p>
+                In the 20th century, huge, lavish New Year's Eve balls were
+                organized. They took place from a public office, regarding
+                meetings or restaurants. Regular house parties were popular
+                during the Polish People's Republic.
+              </p>
+              <p>
+                New Year's traditions included those characteristics of the
+                winter solstice related to magic and fortune-telling. It can be
+                used for hiding, cleaning the house, and looking out for a man
+                as the first member of the household.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <div class="container">
+          <div class="row my-5 fact-container">
+            <h2 class="text-center mb-5">
+              3 Best Places in Poland for New Year’s Eve
+            </h2>
+            <div class="col-12 col-md-6 left-anim">
+              <p class="fw-bold">1. Warsaw</p>
+              <p>
+                The ancient city of Warsaw is certainly one of the most
+                beautiful capitals in Eastern Europe, so a visit during the
+                holidays is something you won’t regret. With plenty of tourist
+                sites, a welcoming vibe, and warm and joyous people, Warsaw will
+                create a festive atmosphere that we’re sure you haven’t seen
+                before!
+                <br />
+                One of the best places you could visit is the Old Town area.
+                This is the liveliest spot around New Year’s when you can drink,
+                dance, and make new friends with tourists and locals. Also,
+                don’t forget to take a walk along the Vistula River during the
+                peak of the holiday season. It will be packed with people and
+                will have live music as well as a spectacular NYE fireworks
+                display.
+              </p>
+            </div>
+            <div
+              class="col-12 col-md-6 d-flex justify-content-center right-anim"
+            >
+              <img
+                class="img-fluid location-image"
+                src="../assets/images/warsaw.webp"
+                alt="Warsaw"
+              />
+            </div>
+          </div>
+
+          <div class="row my-5 fact-container2">
+            <div class="col-12 col-md-6 order-1 order-md-2 right-anim">
+              <p class="fw-bold">2. Krakow</p>
+              <p>
+                Although not as large as Poland’s capital, Krakow still has to
+                offer quite a lot for wandering tourists. It’s one of the most
+                popular destinations for spending the “Sylwester” (this is how
+                the locals refer to New Year’s Eve). This event is among the
+                most important one for the people of Krakow, who celebrate it in
+                a lively atmosphere with music concerts and spectacular
+                performances.
+                <br />
+                Krakow is known for its crazy nightlife, lots of must-visit
+                locations, tasty cuisine, and affordable accommodations. There
+                are many reasons why you should make a holiday getaway to this
+                amazing European city, especially during the time around New
+                Year’s holidays.
+              </p>
             </div>
 
-            <hr>
-            <div class="container">
-                <div class="row my-5 fact-container">
-                    <h2 class="text-center mb-5">3 Best Places in Poland for New Year’s Eve</h2>
-                    <div class="col-12 col-md-6 left-anim">
-                        <p class="fw-bold">1. Warsaw</p>
-                        <p>The ancient city of Warsaw is certainly one of the most beautiful capitals in Eastern Europe,
-                            so a visit during the holidays is something you won’t regret. With plenty of tourist sites,
-                            a welcoming vibe, and warm and joyous people, Warsaw will create a festive atmosphere that
-                            we’re sure you haven’t seen before!
-                            <br>
-                            One of the best places you could visit is the Old Town area. This is the liveliest spot
-                            around New Year’s when you can drink, dance, and make new friends with tourists and locals.
-                            Also, don’t forget to take a walk along the Vistula River during the peak of the holiday
-                            season. It will be packed with people and will have live music as well as a spectacular NYE
-                            fireworks display.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-6 d-flex justify-content-center right-anim">
-                        <img class="img-fluid location-image" src="../assets/images/warsaw.webp" alt="Warsaw">
-                    </div>
-                </div>
-
-                <div class="row my-5 fact-container2">
-                    <div class="col-12 col-md-6 order-1 order-md-2 right-anim">
-                        <p class="fw-bold">2. Krakow</p>
-                        <p>Although not as large as Poland’s capital, Krakow still has to offer quite a lot for
-                            wandering tourists. It’s one of the most popular destinations for spending the “Sylwester”
-                            (this is how the locals refer to New Year’s Eve). This event is among the most important one
-                            for the people of Krakow, who celebrate it in a lively atmosphere with music concerts and
-                            spectacular performances.
-                            <br>
-                            Krakow is known for its crazy nightlife, lots of must-visit locations, tasty cuisine, and
-                            affordable accommodations. There are many reasons why you should make a holiday getaway to
-                            this amazing European city, especially during the time around New Year’s holidays.
-                        </p>
-                    </div>
-
-                    <div class="col-12 col-md-6 order-2 order-md-1 left-anim">
-                        <img class="img-fluid location-image" src="../assets/images/krakow.webp" alt="Krakow">
-                    </div>
-                </div>
-
-                <div class="row my-5 fact-container">
-                    <div class="col-12 col-md-6 left-anim">
-                        <p class="fw-bold">3. Zakopane </p>
-                        <p>
-                            Zakopane, nestled in the breathtaking Tatra Mountains of Poland, is a picturesque town
-                            renowned for its stunning natural beauty and vibrant cultural heritage. As the year draws to
-                            a close, Zakopane transforms into a magical winter wonderland, captivating visitors with its
-                            snow-capped peaks and charming atmosphere.
-                            <br>
-                            One of the most cherished customs in Zakopane during New Year's Eve is the regional
-                            Highlanders' party, known as "Kulig." This enchanting horse-drawn sleigh ride takes
-                            participants through the snow-covered trails, accompanied by traditional music, warm drinks,
-                            and the invigorating mountain air. The evening culminates in a grand fireworks display that
-                            illuminates the sky, marking the arrival of the new year.
-                        </p>
-                    </div>
-
-                    <div class="col-12 col-md-6 right-anim">
-                        <img class="img-fluid location-image" src="../assets/images/zakopane.webp" alt="Zakopane">
-                    </div>
-                </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 left-anim">
+              <img
+                class="img-fluid location-image"
+                src="../assets/images/krakow.webp"
+                alt="Krakow"
+              />
             </div>
-        </section>
+          </div>
+
+          <div class="row my-5 fact-container">
+            <div class="col-12 col-md-6 left-anim">
+              <p class="fw-bold">3. Zakopane</p>
+              <p>
+                Zakopane, nestled in the breathtaking Tatra Mountains of Poland,
+                is a picturesque town renowned for its stunning natural beauty
+                and vibrant cultural heritage. As the year draws to a close,
+                Zakopane transforms into a magical winter wonderland,
+                captivating visitors with its snow-capped peaks and charming
+                atmosphere.
+                <br />
+                One of the most cherished customs in Zakopane during New Year's
+                Eve is the regional Highlanders' party, known as "Kulig." This
+                enchanting horse-drawn sleigh ride takes participants through
+                the snow-covered trails, accompanied by traditional music, warm
+                drinks, and the invigorating mountain air. The evening
+                culminates in a grand fireworks display that illuminates the
+                sky, marking the arrival of the new year.
+              </p>
+            </div>
+
+            <div class="col-12 col-md-6 right-anim">
+              <img
+                class="img-fluid location-image"
+                src="../assets/images/zakopane.webp"
+                alt="Zakopane"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <section style="height: 400px;"></section>
+    <section style="height: 400px"></section>
     <!-- BOOTSTRAP SCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/f6549ef1f7.js" crossorigin="anonymous"></script>
-    <script type="module" src="../../src/assets/js/counterPoland.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f6549ef1f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../../src/assets/js/countryCounter.js"></script>
     <script type="module" src="/src/assets/js/animation.js"></script>
-</body>
-
+  </body>
 </html>

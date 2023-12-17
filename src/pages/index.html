@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festive Timer</title>
+    <!-- BOOTSTRAP 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Festive Timer</title>
-  <!-- BOOTSTRAP 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- MAPBOX CSS -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="/src/assets/css/styles.css" />
+    <link rel="stylesheet" href="/src/assets/css/styles.css" />
 
     <!-- Fontawesom -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Favicons -->
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="../assets/images/favicons/icons8-fireworks-emoji-96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="76x76"
+      href="../assets/images/favicons/icons8-fireworks-emoji-76.png"
+    />
 
     <!-- Favicons -->
     <link
@@ -41,125 +79,136 @@
     />
   </head>
 
-  <!-- Favicons -->
-  <link type="image/png" sizes="16x16" rel="icon" href="../assets/images/favicons/icons8-fireworks-emoji-16.png" />
-  <link type="image/png" sizes="32x32" rel="icon" href="../assets/images/favicons/icons8-fireworks-emoji-32.png" />
-  <link type="image/png" sizes="96x96" rel="icon" href="../assets/images/favicons/icons8-fireworks-emoji-96.png" />
-  <link rel="apple-touch-icon" type="image/png" sizes="76x76"
-    href="../assets/images/favicons/icons8-fireworks-emoji-76.png" />
-</head>
+  <body>
+    <header>
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-lg navbar-dark header-nav">
+        <div class="container">
+          <a href="index.html" class="navbar-brand"
+            ><strong>Festive</strong>Timer</a
+          >
 
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
 
-<body>
-  <header>
-    <!-- Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark header-nav">
-      <div class="container">
-        <a href="index.html" class="navbar-brand"><strong>Festive</strong>Timer</a>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Countries
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="greece.html">Greece</a>
+                  </li>
+                  <li><a class="dropdown-item" href="india.html">India</a></li>
+                  <li>
+                    <a class="dropdown-item" href="ireland.html">Ireland</a>
+                  </li>
+                  <li><a class="dropdown-item" href="japan.html">Japan</a></li>
+                  <li>
+                    <a class="dropdown-item" href="poland.html">Poland</a>
+                  </li>
+                  <li><a class="dropdown-item" href="spain.html">Spain</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="row d-flex justify-content-center">
+          <!-- Map -->
+          <div
+            class="col-12 col-sm-12 d-flex align-items-center flex-column map-container"
+          >
+            <h1 class="my-3 text-center">Global New Year Countdowns</h1>
+            <h2 id="countdown"></h2>
+            <div id="map"></div>
+          </div>
+        </div>
+        <button id="btn-spin" class="mx-auto btn-blue">
+          <i class="fas fa-pause" id="pause-icon"></i>
+          <i class="fas fa-play" id="play-icon" style="display: none"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Countries
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="greece.html">Greece</a></li>
-                <li><a class="dropdown-item" href="india.html">India</a></li>
-                <li><a class="dropdown-item" href="ireland.html">Ireland</a></li>
-                <li><a class="dropdown-item" href="japan.html">Japan</a></li>
-                <li><a class="dropdown-item" href="poland.html">Poland</a></li>
-                <li><a class="dropdown-item" href="spain.html">Spain</a></li>
-
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="team.html">Team</a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
- 
-
-  <main>
-    <section>
-      <div class="row d-flex justify-content-center">
-        <!-- Map -->
-        <div class="col-12 col-sm-12 d-flex align-items-center flex-column map-container">
-          <h1 class="my-3 text-center">Global New Year Countdowns</h1>
-          <h2 id="countdown"></h2>
-          <div id="map"></div>
-        </div>
-      </div>
-      <button id="btn-spin" class="mx-auto btn-blue">
-        <i class="fas fa-pause" id="pause-icon"></i>
-        <i class="fas fa-play" id="play-icon" style="display: none;"></i>
-      </button>
-    </section>
-    <!-- Counter -->
-    <section class="container">
-      <!-- <div class="row custom-row text-center counter-container justify-content-center m-5" id="counter-row"> -->
-      <div class="row text-center mt-3" id="country-counter-container">
-        <!-- Flag -->
-        <div class="col-12 col-md-2">
-          <img src="https://flagcdn.com/ie.svg" id="flag" />
-        </div>
-
-        <!-- Country Name -->
-        <div class="text-center col-12 col-md-2">
-          <h3 id="selectedCountry">SwedenTEST</h3>
-          <h3 id="localCountryTime">00:20:22TEST</h3>
-        </div>
-
-        <!-- Timer -->
-        <div class="col-12 col-md-8 d-flex justify-content-center">
-          <div class="d-flex flex-column timer-container">
-            <div id="days" class="fw-bold m-1 px-3">20</div>
-            <div class="m-1">Days</div>
+      </section>
+      <!-- Counter -->
+      <section class="container">
+        <!-- <div class="row custom-row text-center counter-container justify-content-center m-5" id="counter-row"> -->
+        <div class="row text-center mt-3" id="country-counter-container">
+          <!-- Flag -->
+          <div class="col-12 col-md-2">
+            <img src="https://flagcdn.com/ie.svg" id="flag" />
           </div>
-          <div class="d-flex flex-column timer-container mx-3">
-            <div id="hours" class="fw-bold m-1 px-3">20</div>
-            <div class="m-1">Hours</div>
+
+          <!-- Country Name -->
+          <div class="text-center col-12 col-md-2">
+            <h3 id="selectedCountry">SwedenTEST</h3>
+            <h3 id="localCountryTime">00:20:22TEST</h3>
           </div>
-          <div class="d-flex flex-column timer-container">
-            <div id="minutes" class="fw-bold m-1 px-3">20</div>
-            <div class="m-1">Min</div>
-          </div>
-          <div class="d-flex flex-column timer-container mx-3">
-            <div id="seconds" class="fw-bold m-1 px-3">20</div>
-            <div class="m-1">Sec</div>
+
+          <!-- Timer -->
+          <div class="col-12 col-md-8 d-flex justify-content-center">
+            <div class="d-flex flex-column timer-container">
+              <div id="days" class="fw-bold m-1 px-3">20</div>
+              <div class="m-1">Days</div>
+            </div>
+            <div class="d-flex flex-column timer-container mx-3">
+              <div id="hours" class="fw-bold m-1 px-3">20</div>
+              <div class="m-1">Hours</div>
+            </div>
+            <div class="d-flex flex-column timer-container">
+              <div id="minutes" class="fw-bold m-1 px-3">20</div>
+              <div class="m-1">Min</div>
+            </div>
+            <div class="d-flex flex-column timer-container mx-3">
+              <div id="seconds" class="fw-bold m-1 px-3">20</div>
+              <div class="m-1">Sec</div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- End Counter -->
-  </main>
+      </section>
+      <!-- End Counter -->
+    </main>
 
+    <!-- BOOTSTRAP SCRIPT -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- BOOTSTRAP SCRIPT -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-
-  <script type="module" src="/src/assets/js/countdown.js"></script>
-  <script type="module" src="/src/assets/js/script.js"></script>
-   <script type="module" src="/src/assets/js/togglePlay.js"></script>
+    <script type="module" src="/src/assets/js/countdown.js"></script>
+    <script type="module" src="/src/assets/js/script.js"></script>
+    <script type="module" src="/src/assets/js/togglePlay.js"></script>
   </body>
 </html>
