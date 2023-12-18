@@ -94,7 +94,6 @@ map.on("click", (e) => {
 
   // FUNCTION RUNS WITH BACKEND SERVER
   // fetchGeolocationTimezoneData(lat, lng);
-  displayGeolocationData();
 
   map.flyTo({
     center: [lng, lat],

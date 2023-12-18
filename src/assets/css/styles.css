@@ -1,6 +1,6 @@
 /* basic styles */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
   --dark-blue: #031023;
@@ -9,7 +9,7 @@
   --accent-champagne: #f7e7ce;
 
   --font-family: Verdana, Tahoma, sans-serif;
-  --font-family-heading: 'Roboto', sans-serif;
+  --font-family-heading: "Roboto", sans-serif;
 }
 
 *,
@@ -50,24 +50,32 @@ p {
 
 /* Home Page */
 .map-container {
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: fit-content;
+  top: 10px;
+  border-radius: 10px;
 }
 
 .map-container h1,
 .map-container h2 {
-  position: absolute;
-  margin: auto;
-  z-index: 1;
   text-shadow: 2px 2px 4px #000000b0;
   padding: 10px;
   font-weight: 400;
-  letter-spacing: 1px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.map-container h1 {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+.map-container h2 {
+  font-size: clamp(1rem, 2.5vw, 2rem);
 }
 
 #countdown {
   font-weight: bolder;
-  top: 85px;
   color: var(--accent-champagne);
 }
 
@@ -110,6 +118,7 @@ p {
   padding: 10px 20px;
   text-decoration: none;
   transition: background 0.5s;
+  width: fit-content;
 }
 
 #btn-spin:hover {

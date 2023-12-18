@@ -7,12 +7,12 @@
   {
     "country": "Greece",
     "coords": ["21.8243", "39.0742"],
-    "activity": "Not only are onions a kitchen staple, they can also bring you good luck for the year ahead. In Greece it’s tradition to hang an onion outside your door. Believed to symbolize fertility and growth (thanks to its ability to sprout on its own), the onion is hung on the door after church service on New Year’s Day."
+    "activity": "In Greece, it's a tradition to hang an onion outside the door on New Year's Day for good luck and prosperity. The onion, symbolizing fertility and growth, is believed to bring positive fortune for the year ahead"
   },
   {
     "country": "India",
     "coords": ["78.9629", "20.5937"],
-    "activity": "In Bombay, now known as Mumbai, a tradition thrived where communities would construct an effigy representing the 'old man' symbolizing the passing year. At midnight, this effigy was set ablaze, signifying the departure of past grievances and the welcoming of a new year. The significance extended beyond mere symbolism; it fostered a communal celebration uniting people across diverse backgrounds. Bombay's cosmopolitan nature, home to individuals of varied faiths, allowed for a rich tapestry of festivals. However, the tradition of burning the 'old man' stood out as an inclusive ceremony that transcended age and religious beliefs."
+    "activity": "In Mumbai, an old tradition involved burning an effigy symbolizing the past year at midnight. Beyond symbolism, this communal celebration in the cosmopolitan city united people of diverse backgrounds, standing out as an inclusive ceremony that transcended age and religious beliefs."
   },
   {
     "country": "Japan",
@@ -22,11 +22,91 @@
   {
     "country": "Poland",
     "coords": ["19.1451", "51.9194"],
-    "activity": "The tradition of celebrating New Year's Eve and welcoming the New Year in Poland is only short. Until the second half of the 19th century, there were no lavish New Year's Eve balls, dances or even New Year's toasts. The New Year was welcome in big cities and wealthy homes. In the countryside, the last day of the year had no important significance - the important celebration was Christmas."
+    "activity": "The New Year's Eve celebration in Poland was brief until the latter part of the 19th century. Lavish balls, dances, and toasts were absent, limited to big cities and affluent households. In rural areas, the last day of the year held little significance, with the primary celebration centered around Christmas."
   },
   {
     "country": "Spain",
     "coords": ["-3.7492", "40.4637"],
-    "activity": "The Spanish start off their new year by eating 12 grapes, which symbolize each strike of the clock. The tradition of las doce uvas de la suerte started in the late 19th century and is believed to ward off evil while boosting your chances of a prosperous and lucky new year. However, this will work only if you manage to eat all of the grapes in a matter of seconds since they need to be gone by the time the clock finishes striking midnight."
+    "activity": "Spaniards kick off the new year by quickly eating 12 grapes, symbolizing each clock strike at midnight. This tradition, called 'las doce uvas de la suerte,' dates back to the late 19th century and is believed to bring luck and prosperity if all the grapes are consumed within seconds."
+  },
+  {
+    "country": "United States",
+    "coords": ["-95.7129", "37.0902"],
+    "activity": "Millions of Americans tune in to their TV screens or brave the cold streets of Times Square to witness the annual ball drop at midnight. Originating in 1907 to mark the arrival of January 1908, the event was conceived by New York Times owner Adolph Ochs to showcase the newspaper's new headquarters. Since then, it has become a yearly spectacle and one of the most beloved New Year's Eve celebrations."
+  },
+  {
+    "country": "Brazil",
+    "coords": ["-51.9253", "-14.2350"],
+    "activity": "In Brazil, after midnight, people traditionally go to the beach during the summer. They jump seven waves, making seven wishes to honor Yemanja, the goddess of water. Wearing all white before entering the water symbolizes purity."
+  },
+  {
+    "country": "France",
+    "coords": ["2.2137", "46.2276"],
+    "activity": "In France, New Year's celebrations revolve around Champagne, accompanied by dancing and party-hopping. The culinary tradition remains consistent, with sparkling wines complementing oysters, turkey, goose, or Cornish hen."
+  },
+  {
+    "country": "Haiti",
+    "coords": ["-72.2852", "18.9712"],
+    "activity": "On January 1, Haitians celebrate Independence Day. The traditional meal includes pumpkin soup, soup joumou, once forbidden to enslaved Black people. It's a communal experience with people visiting each other to swap soups and enjoy different variations."
+  },
+  {
+    "country": "Denmark",
+    "coords": ["9.5018", "56.2639"],
+    "activity": "Chucking plates at your friends usually signals a conversation gone very wrong. In Denmark, however, New Year’s Eve traditions like this bring your loved ones the best luck. Tradition has it that the more broken kitchenware you accumulate on your door step, the better off you’ll be."
+  },
+  {
+    "country": "Canada",
+    "coords": ["-106.3468", "56.1304"],
+    "activity": "Freezing temps don’t keep Canadians from starting the new year with a winter favorite sport—ice fishing. According to Global News, families will rent heated huts and cooking equipment so that they can enjoy their feast with loved ones on the spot."
+  },
+  {
+    "country": "Philippines",
+    "coords": ["121.7740", "12.8797"],
+    "activity": "On New Year’s Eve, families in the Philippines make sure to serve 12 round fruits, like apples, grapes, and plums, which are believed to represent prosperity due to their shape, which mirrors coins. As for the lucky number, each fruit represents one month out of the year. "
+  },
+  {
+    "country": "Mexico",
+    "coords": ["-102.5528", "23.6345"],
+    "activity": "In Mexico, families gather to make and share tamales on New Year's Eve, and the following day, they often enjoy them with menudo, a traditional Mexican soup."
+  },
+  {
+    "country": "Colombia",
+    "coords": ["-74.2973", "4.5709"],
+    "activity": "On New Year's Eve in Colombia, the agüero tradition involves placing three potatoes under each family member's bed—one peeled, one unpeeled, and one partially peeled. At midnight, everyone blindly chooses a potato, symbolizing expectations for the upcoming year: good fortune, financial challenges, or a mix of both."
+  },
+  {
+    "country": "Norway",
+    "coords": ["8.4689", "60.4720"],
+    "activity": "Kransekake, a traditional ringed cake often made with at least 18 layers, is eaten in both Denmark and Norway on New Year’s Eve. The sugary layers, which look like cookies, are held together with a tasty royal icing."
+  },
+  {
+    "country": "Italy",
+    "coords": ["12.5674", "41.8719"],
+    "activity": "In Italy, it's considered good luck to be wearing red undergarments as the ball drops. How and when this practice started is disputed, but why not give it a try? We'll wear any underwear color in the new year if it means a bright future ahead. We even shopped some options for you, below. Hell, lean in and choose red for your New Year's Eve nails and New Year's outfit too."
+  },
+  {
+    "country": "Puerto Rico",
+    "coords": ["-66.5901", "18.2208"],
+    "activity": "In many countries, Puerto Rico included, it's customary to start the year by cleaning everything—and we mean everything. The idea behind it is simple: out with the old, in with the new. In short, if you start the year fresh, it will continue that way."
+  },
+  {
+    "country": "England",
+    "coords": ["-1.1743", "52.3555"],
+    "activity": "On New Year's Eve in Britain, people traditionally gather to await the chimes of Big Ben at midnight. As the bells ring, a large circle forms, and people sing the traditional song 'Auld Lang Syne,' according to Natasha Pearlman, executive editor at Glamour."
+  },
+  {
+    "country": "Germany",
+    "coords": ["10.4515", "51.1657"],
+    "activity": "In some European countries, including Austria and Germany, watching this black-and-white British comedy sketch, recorded in 1962, has become traditional viewing on New Year's Eve. Some die-hards even make the four-course dinner featured in the 18-minute sketch."
+  },
+  {
+    "country": "Finland",
+    "coords": ["25.7482", "61.9241"],
+    "activity": "In Finland, people predict the coming year by casting molten tin into a container of water, then interpreting the shape the metal takes after hardening. A heart or ring means a wedding, while a ship predicts travel and a pig declares there will be plenty of food."
+  },
+  {
+    "country": "Australia",
+    "coords": ["133.7751", "-25.2744"],
+    "activity": "Australians celebrate the New Year with midnight fireworks in cities and towns throughout the country. Firework displays are launched off bridges, such as the Sydney Harbour Bridge, from jetties along the beaches, and on river banks, with the lights of the fireworks sparkling off the water"
   }
 ]
