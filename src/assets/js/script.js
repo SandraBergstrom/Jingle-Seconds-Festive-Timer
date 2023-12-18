@@ -23,7 +23,10 @@ map.on("style.load", () => {
   countryInfo.forEach((country) => {
     new mapboxgl.Marker({ color: "red" })
       .setLngLat(country.coords)
-      .setPopup(new mapboxgl.Popup().setHTML(`<h3>${country.country}</h3>`))
+      .setPopup(
+        new mapboxgl.Popup().setHTML(`<h3>${country.country}</h3>
+      <p><strong>${country.celebration}</strong></p>`)
+      )
       .addTo(map);
   });
 });
@@ -65,26 +68,26 @@ map.on("mousedown", () => {
 // Restart spinning the globe when interaction is complete
 map.on("mouseup", () => {
   userInteracting = false;
-  // spinGlobe();
+  spinGlobe();
 });
 
 // These events account for cases where the mouse has moved
 // off the map, so 'mouseup' will not be fired.
 map.on("dragend", () => {
   userInteracting = false;
-  // spinGlobe();
+  spinGlobe();
 });
 map.on("pitchend", () => {
   userInteracting = false;
-  // spinGlobe();
+  spinGlobe();
 });
 map.on("rotateend", () => {
   userInteracting = false;
-  // spinGlobe();
+  spinGlobe();
 });
 
 map.on("moveend", () => {
-  // spinGlobe();
+  spinGlobe();
 });
 
 map.on("click", (e) => {
@@ -94,7 +97,6 @@ map.on("click", (e) => {
 
   // FUNCTION RUNS WITH BACKEND SERVER
   // fetchGeolocationTimezoneData(lat, lng);
-  displayGeolocationData();
 
   map.flyTo({
     center: [lng, lat],
@@ -102,17 +104,6 @@ map.on("click", (e) => {
     essential: true,
   });
 });
-
-// document.getElementById("btn-spin").addEventListener("click", (e) => {
-//   spinEnabled = !spinEnabled;
-//   if (spinEnabled) {
-//     spinGlobe();
-//     e.target.innerHTML = "Pause rotation";
-//   } else {
-//     map.stop(); // Immediately end ongoing animation
-//     e.target.innerHTML = "Start rotation";
-//   }
-// });
 
 // Removed the e.target.innerHTML to prevent the button from changing text
 // when clicked. In html there is now icons instead and a seperate function
@@ -125,8 +116,7 @@ document.getElementById("btn-spin").addEventListener("click", () => {
     map.stop(); // Immediately end ongoing animation
   }
 });
-
-// spinGlobe();
+spinGlobe();
 
 // Zooms to user position
 // async function zoomToLatLng() {
@@ -138,3 +128,22 @@ document.getElementById("btn-spin").addEventListener("click", () => {
 //   });
 // }
 // zoomToLatLng();
+
+//MUSIC
+
+const musicBtn = document.getElementById("btn-music");
+const audio = document.getElementById("track");
+
+const musicToggle = () => {
+  if (musicBtn.classList.contains("playing")) {
+    musicBtn.classList.remove("playing");
+    musicBtn.innerHTML = '<i class="fa-solid fa-music"></i>';
+    audio.pause();
+  } else {
+    musicBtn.classList.add("playing");
+    musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    audio.play();
+  }
+};
+
+musicBtn.addEventListener("click", () => musicToggle());

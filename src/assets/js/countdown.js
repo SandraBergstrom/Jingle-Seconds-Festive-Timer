@@ -1,10 +1,11 @@
 import getTimeDifference from "./countdownLocalized";
+import countryData from "../../lib/data.json";
 
 const newYearDate = new Date("Jan 1, 2024 00:00:00").getTime();
 
-const localCountryTimeElement = document.getElementById("localCountryTime");
 const flagElement = document.getElementById("flag");
 const selectedCountryElement = document.getElementById("selectedCountry");
+const selectedCountryText = document.getElementById("text-element");
 const daysElement = document.getElementById("days");
 const hoursElement = document.getElementById("hours");
 const minutesElement = document.getElementById("minutes");
@@ -125,19 +126,6 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
     component.types.includes("country")
   )?.short_name;
 
-  const countryResult = geoCodeData?.results.find((result) =>
-    result.address_components.some((component) =>
-      component.types.includes("country")
-    )
-  );
-
-  const country = countryResult?.address_components.find((component) =>
-    component.types.includes("country")
-  )?.long_name;
-
-  // DUMMY DATA
-  const dummyCountryCode = "AU";
-
   const countryInfoResponse = await fetch(
     `https://restcountries.com/v3.1/alpha/${countryCode}`
   );
@@ -153,8 +141,6 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
     : rawOffset * 1000;
   const countryTime = new Date(currentTime + totalOffsetMilliseconds);
 
-  localCountryTimeElement.innerHTML;
-
   const distance = newYearDate - countryTime;
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -164,14 +150,21 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  localCountryTimeElement.innerHTML =
-    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
   const flagSrc = countryInfo[0]?.flags?.svg;
 
   flagElement.src = flagSrc;
 
   selectedCountryElement.innerText = countryInfo[0]?.name?.common;
+
+  const filteredCountry = countryData.filter(
+    (country) => country.country === countryInfo[0]?.name?.common
+  );
+
+  if (filteredCountry && filteredCountry.length > 0) {
+    selectedCountryText.innerText = filteredCountry[0].activity;
+  } else {
+    selectedCountryText.innerText = `Know how people in ${countryInfo[0]?.name?.common} celebrate NYE? Please let us know so we can update our map and share it with the world! `;
+  }
 
   // return data;
 }
