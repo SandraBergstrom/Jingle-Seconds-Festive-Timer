@@ -43,7 +43,7 @@ const maxSpinZoom = 5;
 const slowSpinZoom = 3;
 
 let userInteracting = false;
-let spinEnabled = true;
+let spinEnabled = false;
 
 function spinGlobe() {
   const zoom = map.getZoom();
