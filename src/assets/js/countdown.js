@@ -53,6 +53,8 @@ function startTimer(id) {
 }
 
 function startDefaultTimer() {
+  clearInterval(intervalId);
+
   intervalId = setInterval(() => {
     const time = getTimeDifference("Europe", "London");
 
@@ -126,5 +128,3 @@ export async function fetchGeolocationTimezoneData(lat, lng) {
 
   return { geoCodeData, timezoneData };
 }
-
-// getCurrentLocationLatLng();
