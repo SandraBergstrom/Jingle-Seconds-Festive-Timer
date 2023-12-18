@@ -130,5 +130,11 @@
     "coords": ["133.7751", "-25.2744"],
     "activity": "Australians celebrate the New Year with midnight fireworks in cities and towns throughout the country. Firework displays are launched off bridges, such as the Sydney Harbour Bridge, from jetties along the beaches, and on river banks, with the lights of the fireworks sparkling off the water",
     "celebration": "Sydney Harbour Fireworks"
+  },
+  {
+    "country": "China",
+    "coords": ["104.1954", "35.8617"],
+    "activity": "Chinese New Year a annual 15-day festival. Families gather for a New Year's Eve dinner called Nian Ye Fan, seated around a large table. They burn incense to honor ancestors, and elders gift younger members with lucky money, known as Ya Sui Qian, in red envelopes (Hong Bao).",
+    "celebration": "Chinese New Year, annual 15-day festival"
   }
 ]

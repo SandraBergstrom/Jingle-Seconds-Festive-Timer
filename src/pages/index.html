@@ -19,6 +19,7 @@
     />
 
     <link rel="stylesheet" href="/src/assets/css/styles.css" />
+    <link rel="stylesheet" href="/src/assets/css/fireworks.scss" />
 
     <!-- Fontawesom -->
     <link
@@ -116,6 +117,12 @@
       <source src="../assets/audio/christmas-music.mp3" type="audio/mp3" />
     </audio>
 
+    <!-- FIREWORKS -->
+    <div class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+
     <main>
       <section>
         <div class="row d-flex justify-content-center position-relative">
@@ -132,6 +139,9 @@
             <button id="btn-spin">
               <i class="fas fa-pause" id="pause-icon"></i>
               <i class="fas fa-rotate" id="play-icon" style="display: none"></i>
+            </button>
+            <button id="btn-locate">
+              <i class="fa-solid fa-location-dot"></i>
             </button>
           </div>
         </div>
@@ -152,10 +162,9 @@
           <!-- Country Name -->
           <div class="text-center col-12 col-md-4">
             <div class="text-box">
-              <h3 id="selectedCountry">Country Test</h3>
+              <h3 id="selectedCountry">Global NYE Countdown</h3>
               <p id="text-element">
-                SAMPLE TEXT Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Id odit ducimus illo possimus culpa ratione facilis.
+                Choose a country and learn about their local celebrations!
               </p>
             </div>
 
