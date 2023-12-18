@@ -100,7 +100,7 @@ map.on("click", (e) => {
 
   map.flyTo({
     center: [lng, lat],
-    zoom: 4,
+    zoom: 3,
     essential: true,
   });
 });
@@ -118,14 +118,14 @@ document.getElementById("btn-spin").addEventListener("click", () => {
 });
 spinGlobe();
 
-// Zooms to user position
 // async function zoomToLatLng() {
 //   const { lat, lng } = await getCurrentLocationLatLng();
 //   map.flyTo({
 //     center: [lng, lat],
-//     zoom: 4,
+//     zoom: 3,
 //     essential: true,
 //   });
+//   fetchGeolocationTimezoneData(lat, lng);
 // }
 // zoomToLatLng();
 

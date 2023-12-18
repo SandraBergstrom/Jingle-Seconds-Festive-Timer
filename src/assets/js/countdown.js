@@ -131,25 +131,6 @@ export async function displayGeolocationData(geoCodeData, timezoneData) {
   );
   const countryInfo = await countryInfoResponse.json();
 
-  // TIMEZONE DISABLED DURING TESTING
-
-  const { dstOffset, rawOffset } = timezoneData;
-
-  const currentTime = Date.now();
-  const totalOffsetMilliseconds = dstOffset
-    ? dstOffset * 1000
-    : rawOffset * 1000;
-  const countryTime = new Date(currentTime + totalOffsetMilliseconds);
-
-  const distance = newYearDate - countryTime;
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
   const flagSrc = countryInfo[0]?.flags?.svg;
 
   flagElement.src = flagSrc;
