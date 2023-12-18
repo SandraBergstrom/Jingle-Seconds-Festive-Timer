@@ -48,11 +48,18 @@ p {
   color: var(--dark-blue);
 }
 
+/* MAPBOX */
+
+.mapboxgl-popup-close-button {
+  font-size: 24px;
+  line-height: 24px;
+}
+
 /* Home Page */
 .map-container {
   position: absolute;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   width: fit-content;
   top: 10px;
   border-radius: 10px;
@@ -101,11 +108,18 @@ p {
   background-color: var(--dark-blue);
 }
 
-#btn-spin {
-  position: relative;
-  top: -55px;
+.map-btn-container {
+  position: absolute;
+  bottom: 30px;
   left: 10px;
-  display: inline-block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#btn-spin,
+#btn-music {
   font-family: var(--font-family);
   color: var(--accent-champagne);
   background: linear-gradient(
@@ -329,7 +343,7 @@ p {
     color: var(--accent-champagne);
   }
 
-  #btn-spin {
+  .map-btn-container {
     bottom: 28vh;
     left: 40px;
   }

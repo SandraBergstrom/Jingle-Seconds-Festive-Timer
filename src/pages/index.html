@@ -112,6 +112,10 @@
       </nav>
     </header>
 
+    <audio loop="loop" id="track">
+      <source src="../assets/audio/christmas-music.mp3" type="audio/mp3" />
+    </audio>
+
     <main>
       <section>
         <div class="row d-flex justify-content-center position-relative">
@@ -121,10 +125,15 @@
             <h2 id="countdown"></h2>
           </div>
           <div id="map"></div>
-          <button id="btn-spin">
-            <i class="fas fa-pause" id="pause-icon"></i>
-            <i class="fas fa-rotate" id="play-icon" style="display: none"></i>
-          </button>
+          <div class="map-btn-container">
+            <button id="btn-music">
+              <i class="fa-solid fa-music"></i>
+            </button>
+            <button id="btn-spin">
+              <i class="fas fa-pause" id="pause-icon"></i>
+              <i class="fas fa-rotate" id="play-icon" style="display: none"></i>
+            </button>
+          </div>
         </div>
       </section>
       <!-- Counter -->
