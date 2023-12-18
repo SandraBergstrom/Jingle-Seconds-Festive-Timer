@@ -61,7 +61,7 @@ function startDefaultTimer() {
     countdown.innerText = `${time.days}d ${time.hours}h ${
       time.minutes
     }m ${Math.trunc(time.seconds)}s`;
-  }, 1000); // Adjust the interval duration as needed
+  }, 1000);
 }
 
 // STARTS THE DEFAULT TIMER
