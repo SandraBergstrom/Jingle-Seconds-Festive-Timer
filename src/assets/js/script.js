@@ -6,6 +6,8 @@ import {
 } from "./countdown";
 import countryInfo from "../../lib/data.json";
 
+const locateBtn = document.getElementById("btn-locate");
+
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmFybmVzbG93IiwiYSI6ImNsMGUyeHV6MDBmMGYzanBybDIyZ3BvOTQifQ.orwWz3XDibvdJSe_tfAxEA";
 
@@ -93,10 +95,7 @@ map.on("moveend", () => {
 map.on("click", (e) => {
   const { lng, lat } = e.lngLat;
 
-  console.log(lng, lat);
-
-  // FUNCTION RUNS WITH BACKEND SERVER
-  // fetchGeolocationTimezoneData(lat, lng);
+  fetchGeolocationTimezoneData(lat, lng);
 
   map.flyTo({
     center: [lng, lat],
@@ -118,16 +117,15 @@ document.getElementById("btn-spin").addEventListener("click", () => {
 });
 spinGlobe();
 
-// async function zoomToLatLng() {
-//   const { lat, lng } = await getCurrentLocationLatLng();
-//   map.flyTo({
-//     center: [lng, lat],
-//     zoom: 3,
-//     essential: true,
-//   });
-//   fetchGeolocationTimezoneData(lat, lng);
-// }
-// zoomToLatLng();
+async function zoomToLatLng() {
+  const { lat, lng } = await getCurrentLocationLatLng();
+  map.flyTo({
+    center: [lng, lat],
+    zoom: 3,
+    essential: true,
+  });
+  fetchGeolocationTimezoneData(lat, lng);
+}
 
 //MUSIC
 
@@ -147,3 +145,4 @@ const musicToggle = () => {
 };
 
 musicBtn.addEventListener("click", () => musicToggle());
+locateBtn.addEventListener("click", () => zoomToLatLng());
