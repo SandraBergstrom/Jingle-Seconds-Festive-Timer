@@ -69,6 +69,7 @@ p {
 .map-container h2 {
   text-shadow: 2px 2px 4px #000000b0;
   padding: 10px;
+  margin: 0 !important;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
@@ -78,7 +79,7 @@ p {
   font-size: clamp(1.2rem, 2.5vw, 2rem);
 }
 .map-container h2 {
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
 }
 
 #countdown {

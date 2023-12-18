@@ -15,6 +15,10 @@
     "gsap": "^3.12.4",
     "luxon": "^3.4.4",
     "mapbox-gl": "^3.0.1",
-    "parcel": "^2.9.3"
+    "parcel": "^2.9.3",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3"
   }
 }
